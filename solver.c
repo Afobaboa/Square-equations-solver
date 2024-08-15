@@ -7,10 +7,8 @@
 
 
 
-rootCount_t solveEquation(double a, double b, double c, answer_t* answer);
 static rootCount_t solveLinearEquation(double a, double b, answer_t* answer);
-static rootCount_t solveSquareEquation(double a, double b, double c, answer_t* answer);
-static double getDiscriminant(double a, double b, double c);
+static rootCount_t solveSquareEquation(double a, double b, double c, answer_t* const answer);
 static bool isNull(double num);
 
 
@@ -24,8 +22,8 @@ rootCount_t solveEquation(double a, double b, double c, answer_t* answer) {
 
 
 // Solve ax^2 + bx + c = 0, a CAN'T be 0
-static rootCount_t solveEquation(double a, double b, double c, answer_t* answer) {
-    double discr = getDiscriminant(a, b, c);
+static rootCount_t solveSquareEquation(double a, double b, double c, answer_t* answer) {
+    double discr = b*b - 4*a*c;
     if (isNull(discr)) {
         answer[0] = -b / (2*a);
         return ONE_ROOT;
@@ -33,7 +31,7 @@ static rootCount_t solveEquation(double a, double b, double c, answer_t* answer)
         return NO_ROOTS;
     else {
         answer[0] = (-b - sqrt(discr)) / (2*a);
-        answer[1] = (-b + sqrt(discr) / (2*a));
+        answer[1] = (-b + sqrt(discr)) / (2*a);
         return TWO_ROOTS;
     }
 }
@@ -48,12 +46,6 @@ static rootCount_t solveLinearEquation(double a, double b, answer_t* answer) {
             return NO_ROOTS;
     answer[0] = -b/a;
     return ONE_ROOT;
-}
-
-
-// Get discriminant
-static double getDiscriminant(double a, double b, double c) {
-    return b*b - 4*a*c;
 }
 
 
