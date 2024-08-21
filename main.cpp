@@ -14,9 +14,9 @@ typedef enum ANSWER answer_t;
 
 
 
-void RunSolvingLoop();
-answer_t GetAnswer();
-void ProcessAnswer(answer_t answer);
+static void RunSolvingLoop();
+static answer_t GetAnswer();
+static void ProcessAnswer(answer_t answer);
 
 
 
@@ -29,7 +29,7 @@ int main() {
 
 
 // Run solving loop until solver exits
-void RunSolvingLoop() {
+static void RunSolvingLoop() {
     answer_t answer  = CONTINUE;
     while (answer == CONTINUE || answer == RESELECTION) {
         squareEquation equation = InsertEquation();
@@ -45,7 +45,7 @@ void RunSolvingLoop() {
 
 
 // Process user's selection 
-void ProcessAnswer(answer_t answer) {
+static void ProcessAnswer(answer_t answer) {
     assert(answer != CONTINUE || answer != EXIT);
     if (answer == RESELECTION) 
         puts("Такого варианта нет. Попробуем еще раз.");
@@ -53,7 +53,7 @@ void ProcessAnswer(answer_t answer) {
 
 
 // Get user's answer 
-answer_t GetAnswer() {
+static answer_t GetAnswer() {
     PrintAnswersMessage();
     int answer = GetIntValue();
     switch (answer) {
