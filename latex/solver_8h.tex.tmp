@@ -1,0 +1,32 @@
+\hypertarget{solver_8h}{}\doxysection{solver.\+h File Reference}
+\label{solver_8h}\index{solver.h@{solver.h}}
+{\ttfamily \#include \char`\"{}square\+Equation.\+h\char`\"{}}\newline
+Include dependency graph for solver.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} \mbox{\hyperlink{solver_8h_afbd5e6b906c7eecb77092a8bf8b707bd}{Solve\+Equation}} (\mbox{\hyperlink{structsquareEquation}{square\+Equation}} equation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header let you solve square equations. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{solver_8h_afbd5e6b906c7eecb77092a8bf8b707bd}\label{solver_8h_afbd5e6b906c7eecb77092a8bf8b707bd}} 
+\index{solver.h@{solver.h}!SolveEquation@{SolveEquation}}
+\index{SolveEquation@{SolveEquation}!solver.h@{solver.h}}
+\doxysubsubsection{\texorpdfstring{SolveEquation()}{SolveEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} Solve\+Equation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquation}{square\+Equation}}}]{equation }\end{DoxyParamCaption})}
+
+This function solve ax$^\wedge$2 + bx + c = 0 equation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & User\textquotesingle{}s equation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct \mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} from \char`\"{}square\+Equation.\+h\char`\"{} which contain count of equation\textquotesingle{}s roots and roots. If there are infinity rootsor zero roots, x1 and x2 may be random double. If there is one root, this root is x1, then x2 may be random double. 
+\end{DoxyReturn}

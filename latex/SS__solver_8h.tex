@@ -1,0 +1,53 @@
+\hypertarget{SS__solver_8h}{}\doxysection{SS\+\_\+solver.\+h File Reference}
+\label{SS__solver_8h}\index{SS\_solver.h@{SS\_solver.h}}
+{\ttfamily \#include \char`\"{}SS\+\_\+square\+Equation.\+h\char`\"{}}\newline
+Include dependency graph for SS\+\_\+solver.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} \mbox{\hyperlink{SS__solver_8h_aad95369f7091b5a158d4d4a67fe5dc44}{Solve\+Equation}} (\mbox{\hyperlink{structsquareEquation}{square\+Equation}} $\ast$equation)
+\item 
+bool \mbox{\hyperlink{SS__solver_8h_a7f65fd25044f58128752bc886efbc493}{Is\+Roots\+Equal}} (\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$first\+Roots, \mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$second\+Roots)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file let you solve square equations.
+
+Accuracy of calculations is E-\/5. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SS__solver_8h_a7f65fd25044f58128752bc886efbc493}\label{SS__solver_8h_a7f65fd25044f58128752bc886efbc493}} 
+\index{SS\_solver.h@{SS\_solver.h}!IsRootsEqual@{IsRootsEqual}}
+\index{IsRootsEqual@{IsRootsEqual}!SS\_solver.h@{SS\_solver.h}}
+\doxysubsubsection{\texorpdfstring{IsRootsEqual()}{IsRootsEqual()}}
+{\footnotesize\ttfamily bool Is\+Roots\+Equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$}]{first\+Roots,  }\item[{\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$}]{second\+Roots }\end{DoxyParamCaption})}
+
+This function used to compare two roots.
+
+\begin{DoxyReturn}{Returns}
+true if roots are equal. 
+
+false if roots are not equal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{SS__solver_8h_aad95369f7091b5a158d4d4a67fe5dc44}\label{SS__solver_8h_aad95369f7091b5a158d4d4a67fe5dc44}} 
+\index{SS\_solver.h@{SS\_solver.h}!SolveEquation@{SolveEquation}}
+\index{SolveEquation@{SolveEquation}!SS\_solver.h@{SS\_solver.h}}
+\doxysubsubsection{\texorpdfstring{SolveEquation()}{SolveEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} Solve\+Equation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquation}{square\+Equation}} $\ast$}]{equation }\end{DoxyParamCaption})}
+
+This function solve ax$^\wedge$2 + bx + c = 0 equation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & User\textquotesingle{}s equation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct \mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} from \char`\"{}square\+Equation.\+h\char`\"{}. Accuracy is equal to EPSILON. 
+
+If there are two roots, x1 will be less than x2. 
+
+If there are not two roots, they will be equal to zero. 
+\end{DoxyReturn}

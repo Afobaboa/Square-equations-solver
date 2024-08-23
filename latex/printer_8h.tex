@@ -1,0 +1,58 @@
+\hypertarget{printer_8h}{}\doxysection{printer.\+h File Reference}
+\label{printer_8h}\index{printer.h@{printer.h}}
+{\ttfamily \#include \char`\"{}square\+Equation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SS\+\_\+errors.\+h\char`\"{}}\newline
+Include dependency graph for printer.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{printer_8h_a37547880ed135c03c29834060a8f6c6c}{Print\+Start\+Message}} ()
+\item 
+void \mbox{\hyperlink{printer_8h_afbbfd405669adcb5e64d49d12be7ac3b}{Print\+End\+Message}} ()
+\item 
+void \mbox{\hyperlink{printer_8h_a912dbe093daa696c7946489e18a7cb4e}{Print\+Wrong\+Input\+Message}} ()
+\item 
+\mbox{\hyperlink{SS__errors_8h_a7792c5d595caf3a9308bf125f89dc08b}{SS\+\_\+error\+\_\+t}} \mbox{\hyperlink{printer_8h_a7608686296a3aedc87be72e294c0462b}{Print\+Roots}} (\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} equation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thera are functions printing some special messages. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{printer_8h_afbbfd405669adcb5e64d49d12be7ac3b}\label{printer_8h_afbbfd405669adcb5e64d49d12be7ac3b}} 
+\index{printer.h@{printer.h}!PrintEndMessage@{PrintEndMessage}}
+\index{PrintEndMessage@{PrintEndMessage}!printer.h@{printer.h}}
+\doxysubsubsection{\texorpdfstring{PrintEndMessage()}{PrintEndMessage()}}
+{\footnotesize\ttfamily void Print\+End\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print special messag when solving\+Loop() is ended. \mbox{\Hypertarget{printer_8h_a7608686296a3aedc87be72e294c0462b}\label{printer_8h_a7608686296a3aedc87be72e294c0462b}} 
+\index{printer.h@{printer.h}!PrintRoots@{PrintRoots}}
+\index{PrintRoots@{PrintRoots}!printer.h@{printer.h}}
+\doxysubsubsection{\texorpdfstring{PrintRoots()}{PrintRoots()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{SS__errors_8h_a7792c5d595caf3a9308bf125f89dc08b}{SS\+\_\+error\+\_\+t}} Print\+Roots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}}}]{equation }\end{DoxyParamCaption})}
+
+Print all roots if equation according to count of roots.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & User\textquotesingle{}s equation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+WRONG\+\_\+\+ROOT\+\_\+\+COUNT if equation.\+root\+Count is unexpected (not from enum ROOT\+\_\+\+COUNT). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{printer_8h_a37547880ed135c03c29834060a8f6c6c}\label{printer_8h_a37547880ed135c03c29834060a8f6c6c}} 
+\index{printer.h@{printer.h}!PrintStartMessage@{PrintStartMessage}}
+\index{PrintStartMessage@{PrintStartMessage}!printer.h@{printer.h}}
+\doxysubsubsection{\texorpdfstring{PrintStartMessage()}{PrintStartMessage()}}
+{\footnotesize\ttfamily void Print\+Start\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print special message when solving\+Loop() is started. \mbox{\Hypertarget{printer_8h_a912dbe093daa696c7946489e18a7cb4e}\label{printer_8h_a912dbe093daa696c7946489e18a7cb4e}} 
+\index{printer.h@{printer.h}!PrintWrongInputMessage@{PrintWrongInputMessage}}
+\index{PrintWrongInputMessage@{PrintWrongInputMessage}!printer.h@{printer.h}}
+\doxysubsubsection{\texorpdfstring{PrintWrongInputMessage()}{PrintWrongInputMessage()}}
+{\footnotesize\ttfamily void Print\+Wrong\+Input\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print special message if there is wrong value in stdin. 

@@ -1,0 +1,97 @@
+\hypertarget{io_8h}{}\doxysection{io.\+h File Reference}
+\label{io_8h}\index{io.h@{io.h}}
+{\ttfamily \#include \char`\"{}square\+Equation.\+h\char`\"{}}\newline
+Include dependency graph for io.\+h\+:
+% FIG 0
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{io_8h_a286838ea1857ae14bbf3781ee73a5224}\label{io_8h_a286838ea1857ae14bbf3781ee73a5224}} 
+typedef enum \mbox{\hyperlink{io_8h_adbd21a96aaaa764164cadf065ea1e5ba}{CONTINUE\+\_\+\+STATUS}} {\bfseries continue\+Status\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{io_8h_adbd21a96aaaa764164cadf065ea1e5ba}{CONTINUE\+\_\+\+STATUS}} \{ \mbox{\hyperlink{io_8h_adbd21a96aaaa764164cadf065ea1e5baa49959dd441dcda75d6898cf2c68fb374}{CONTINUE}}
+, \mbox{\hyperlink{io_8h_adbd21a96aaaa764164cadf065ea1e5baa7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}
+, \mbox{\hyperlink{io_8h_adbd21a96aaaa764164cadf065ea1e5baad3f50e81c29b3504c8f7aa80ca1eb3d8}{RESELECTION}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsquareEquation}{square\+Equation}} \mbox{\hyperlink{io_8h_a01a618f9111fea63af9b672b2cef91a5}{Set\+Equation}} ()
+\item 
+continue\+Status\+\_\+t \mbox{\hyperlink{io_8h_aa39cc680dbe5208baa9d724407f59d7a}{Get\+Continue\+Status}} ()
+\item 
+\mbox{\hyperlink{SS__errors_8h_a7792c5d595caf3a9308bf125f89dc08b}{SS\+\_\+error\+\_\+t}} \mbox{\hyperlink{io_8h_a7608686296a3aedc87be72e294c0462b}{Print\+Roots}} (\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} equation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file used to init int or double values and to set user\textquotesingle{}s equation.
+
+There are depended scanning from stdin. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{io_8h_adbd21a96aaaa764164cadf065ea1e5ba}\label{io_8h_adbd21a96aaaa764164cadf065ea1e5ba}} 
+\index{io.h@{io.h}!CONTINUE\_STATUS@{CONTINUE\_STATUS}}
+\index{CONTINUE\_STATUS@{CONTINUE\_STATUS}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{CONTINUE\_STATUS}{CONTINUE\_STATUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{io_8h_adbd21a96aaaa764164cadf065ea1e5ba}{CONTINUE\+\_\+\+STATUS}}}
+
+This enum shows if user want to continue of exit the program. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUE@{CONTINUE}!io.h@{io.h}}\index{io.h@{io.h}!CONTINUE@{CONTINUE}}}\mbox{\Hypertarget{io_8h_adbd21a96aaaa764164cadf065ea1e5baa49959dd441dcda75d6898cf2c68fb374}\label{io_8h_adbd21a96aaaa764164cadf065ea1e5baa49959dd441dcda75d6898cf2c68fb374}} 
+CONTINUE&User wants to continue. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT@{EXIT}!io.h@{io.h}}\index{io.h@{io.h}!EXIT@{EXIT}}}\mbox{\Hypertarget{io_8h_adbd21a96aaaa764164cadf065ea1e5baa7a10b5d68d31711288e1fe0fa17dbf4f}\label{io_8h_adbd21a96aaaa764164cadf065ea1e5baa7a10b5d68d31711288e1fe0fa17dbf4f}} 
+EXIT&User wants to exit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESELECTION@{RESELECTION}!io.h@{io.h}}\index{io.h@{io.h}!RESELECTION@{RESELECTION}}}\mbox{\Hypertarget{io_8h_adbd21a96aaaa764164cadf065ea1e5baad3f50e81c29b3504c8f7aa80ca1eb3d8}\label{io_8h_adbd21a96aaaa764164cadf065ea1e5baad3f50e81c29b3504c8f7aa80ca1eb3d8}} 
+RESELECTION&User makes enexpected choice. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{io_8h_aa39cc680dbe5208baa9d724407f59d7a}\label{io_8h_aa39cc680dbe5208baa9d724407f59d7a}} 
+\index{io.h@{io.h}!GetContinueStatus@{GetContinueStatus}}
+\index{GetContinueStatus@{GetContinueStatus}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{GetContinueStatus()}{GetContinueStatus()}}
+{\footnotesize\ttfamily continue\+Status\+\_\+t Get\+Continue\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function ask user if he want to continue or exit the program.
+
+\begin{DoxyReturn}{Returns}
+CONTINUE\+\_\+\+STATUS code. You should to proscess it yourself. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8h_a7608686296a3aedc87be72e294c0462b}\label{io_8h_a7608686296a3aedc87be72e294c0462b}} 
+\index{io.h@{io.h}!PrintRoots@{PrintRoots}}
+\index{PrintRoots@{PrintRoots}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PrintRoots()}{PrintRoots()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{SS__errors_8h_a7792c5d595caf3a9308bf125f89dc08b}{SS\+\_\+error\+\_\+t}} Print\+Roots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}}}]{equation }\end{DoxyParamCaption})}
+
+Print all roots if equation according to count of roots.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & User\textquotesingle{}s equation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+WRONG\+\_\+\+ROOT\+\_\+\+COUNT if equation.\+root\+Count is unexpected (not from enum ROOT\+\_\+\+COUNT). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8h_a01a618f9111fea63af9b672b2cef91a5}\label{io_8h_a01a618f9111fea63af9b672b2cef91a5}} 
+\index{io.h@{io.h}!SetEquation@{SetEquation}}
+\index{SetEquation@{SetEquation}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{SetEquation()}{SetEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsquareEquation}{square\+Equation}} Set\+Equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set coefficients of square equation.
+
+\begin{DoxyReturn}{Returns}
+Struct \mbox{\hyperlink{structsquareEquation}{square\+Equation}} which contain only coefficients of user\textquotesingle{}s square equation from stdin. 
+\end{DoxyReturn}

@@ -1,0 +1,67 @@
+\hypertarget{scanner_8h}{}\doxysection{scanner.\+h File Reference}
+\label{scanner_8h}\index{scanner.h@{scanner.h}}
+{\ttfamily \#include \char`\"{}square\+Equation.\+h\char`\"{}}\newline
+Include dependency graph for scanner.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{scanner_8h_a26559ca8efc424335f29c11326032b07}{Get\+Double\+Value}} ()
+\item 
+int \mbox{\hyperlink{scanner_8h_a6a0a8c8b9792d2c6ee135a0033e7da0f}{Get\+Int\+Value}} ()
+\item 
+void \mbox{\hyperlink{scanner_8h_a8918842b552bdc8e3a60893135f74e8b}{Clear\+Input}} ()
+\item 
+\mbox{\hyperlink{structsquareEquation}{square\+Equation}} \mbox{\hyperlink{scanner_8h_a01a618f9111fea63af9b672b2cef91a5}{Set\+Equation}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file used to init int or double values and to set user\textquotesingle{}s equation.
+
+There are depended scanning from stdin. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scanner_8h_a8918842b552bdc8e3a60893135f74e8b}\label{scanner_8h_a8918842b552bdc8e3a60893135f74e8b}} 
+\index{scanner.h@{scanner.h}!ClearInput@{ClearInput}}
+\index{ClearInput@{ClearInput}!scanner.h@{scanner.h}}
+\doxysubsubsection{\texorpdfstring{ClearInput()}{ClearInput()}}
+{\footnotesize\ttfamily void Clear\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear stdin. Used to fix looped scanf(). \mbox{\Hypertarget{scanner_8h_a26559ca8efc424335f29c11326032b07}\label{scanner_8h_a26559ca8efc424335f29c11326032b07}} 
+\index{scanner.h@{scanner.h}!GetDoubleValue@{GetDoubleValue}}
+\index{GetDoubleValue@{GetDoubleValue}!scanner.h@{scanner.h}}
+\doxysubsubsection{\texorpdfstring{GetDoubleValue()}{GetDoubleValue()}}
+{\footnotesize\ttfamily double Get\+Double\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get double value from stdin.
+
+If value is wrong, this function ask to write right input and clear stdin.
+
+\begin{DoxyReturn}{Returns}
+Next double value from stdin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scanner_8h_a6a0a8c8b9792d2c6ee135a0033e7da0f}\label{scanner_8h_a6a0a8c8b9792d2c6ee135a0033e7da0f}} 
+\index{scanner.h@{scanner.h}!GetIntValue@{GetIntValue}}
+\index{GetIntValue@{GetIntValue}!scanner.h@{scanner.h}}
+\doxysubsubsection{\texorpdfstring{GetIntValue()}{GetIntValue()}}
+{\footnotesize\ttfamily int Get\+Int\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get int value from stdin.
+
+If value is wrong, this function ask to write right input and clear stdin.
+
+\begin{DoxyReturn}{Returns}
+Next int value from stdin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scanner_8h_a01a618f9111fea63af9b672b2cef91a5}\label{scanner_8h_a01a618f9111fea63af9b672b2cef91a5}} 
+\index{scanner.h@{scanner.h}!SetEquation@{SetEquation}}
+\index{SetEquation@{SetEquation}!scanner.h@{scanner.h}}
+\doxysubsubsection{\texorpdfstring{SetEquation()}{SetEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsquareEquation}{square\+Equation}} Set\+Equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set coefficients of square equation.
+
+\begin{DoxyReturn}{Returns}
+Struct \mbox{\hyperlink{structsquareEquation}{square\+Equation}} which contain only coefficients of user\textquotesingle{}s square equation from stdin. 
+\end{DoxyReturn}
