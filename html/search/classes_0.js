@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['squareequation_2',['squareEquation',['../structsquareEquation.html',1,'']]],
-  ['squareequationroots_3',['squareEquationRoots',['../structsquareEquationRoots.html',1,'']]]
+  ['solvertest_15',['SolverTest',['../structSolverTest.html',1,'']]],
+  ['squareequation_16',['squareEquation',['../structsquareEquation.html',1,'']]],
+  ['squareequationroots_17',['squareEquationRoots',['../structsquareEquationRoots.html',1,'']]]
 ];
