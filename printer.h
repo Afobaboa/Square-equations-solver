@@ -2,16 +2,13 @@
 #define PRINTER_H
 
 
+#include "squareEquation.h"
+#include "SS_errors.h"
 
-#include "solver.h"
-#include "stdlib.h"
 
-
-void PrintHelloMessage();
+void PrintStartMessage();
 void PrintEndMessage();
-void PrintAnswersMessage();
-void PrintRoots(squareEquationRoots equation);
-
+SS_error_t PrintRoots(squareEquationRoots equation);
 
 
 #endif // PRINTER_H

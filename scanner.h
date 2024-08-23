@@ -2,13 +2,13 @@
 #define SCANNER_H
 
 
-
-const int MAX_VALUE_LENGHT = 10;
+#include "squareEquation.h"
 
 
 double GetDoubleValue();
 int GetIntValue();
-
+void ClearInput();
+squareEquation SetEquation();
 
 
 #endif // SCANNER_H

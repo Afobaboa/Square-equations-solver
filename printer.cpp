@@ -1,12 +1,11 @@
 #include <assert.h>
 #include <stdio.h>
 #include "printer.h"
-#include "solver.h"
 
 
 
 // Print helloMessage when program starts
-void PrintHelloMessage() {
+void PrintStartMessage() {
     puts("Эта программа умеет решать квадратные уравнения в вещественных числах! Попоробуй сам!");
 }
 
@@ -17,31 +16,26 @@ void PrintEndMessage() {
 }
 
 
-// Print seletionMessage
-void PrintAnswersMessage() {
-    puts("Хотите продолжить решать уравнения? Введите нужную цифру.\n"
-         "1 - да, хочу продолжить.\n"
-         "2 - нет, хочу выйти.\n");
-}
+
 
 
 // Print roots of user's equation
-void PrintRoots(squareEquationRoots roots) {
+SS_error_t PrintRoots(squareEquationRoots roots) {
     switch (roots.rootCount) {
     case INFINITE_ROOT_COUNT: 
         puts("Все действительные числа являются корнями.\n");
-        break;
+        return OK;
     case NO_ROOTS:
         puts("У данного уравнения нет действительных корней.\n");
-        break;
+        return OK;
     case ONE_ROOT:
         printf("Корень данного уравнения x = %lg\n", roots.x1);
-        break;
+        return OK;
     case TWO_ROOTS:
         printf("Корни данного уравнения x1 = %lg, x2 = %lg\n", roots.x1, roots.x2);
-        break;
+        return OK;
     default:
         fprintf(stderr, "printer.c: ERROR, wrong rootCount type.");
-        exit(1);
+        return WRONG_ROOT_COUNT;
     }
 }
