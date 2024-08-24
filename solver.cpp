@@ -1,6 +1,6 @@
 #include <math.h>
 #include <stdbool.h>
-#include "SS_solver.h"
+#include "solver.h"
 
 
 static squareEquationRoots SolveLinearEquation(squareEquation* equation);

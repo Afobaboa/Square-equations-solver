@@ -2,7 +2,7 @@
 #define SCANNER_H
 
 
-#include "SS_squareEquation.h"
+#include "squareEquation.h"
 
 
 
