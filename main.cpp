@@ -14,10 +14,9 @@ enum OPTIONS {
 typedef enum OPTIONS option_t;
 
 
-static void     StartSolving();
 static void     RunSolving();
 static void     PrintHelp();
-static option_t GetOption(char* option);
+static option_t GetOption(const char* option);
 static bool     ProcessOption(option_t option);
 
 
@@ -35,7 +34,7 @@ int main(int argc, char* argv[]) {
         }
     }
     if (argc - counter != 0)
-        printf("Wrong! Try \"%s -help\".", argv[0]);
+        printf("Неправильная опция! Попробуйте \"%s -help\".\n", argv[0]);
 
     return 0;
 }
@@ -44,7 +43,9 @@ int main(int argc, char* argv[]) {
 // Prints special message if there is -help
 void PrintHelp() {
     puts("Доступные опции:\n"
-         "-help выводит окошко");
+         "-help выводит окошко.\n"
+         "-t запускает тестирование.");
+    puts("\nДля решения квадратных уравнений запустите программу без опций.");
 }
 
 
@@ -91,10 +92,9 @@ bool ProcessOption(option_t option) {
         RunSolverTesting();
         return true;
     case WRONG_OPTION:
-        fprintf(stderr, "main.cpp: ProcessOption(): ERROR, wrong option.");
         return false;
     default:    
-        fprintf(stderr, "main.cpp: ProcessOption(): ERROR, option doesn't exist.");
-
+        fprintf(stderr, "main.cpp: ProcessOption(): ERROR, option doesn't exist.\n");
+        return false;
     }
 }

@@ -24,28 +24,23 @@ integer-divide-by-zero,leak,nonnull-attribute,null,object-size,$\
 return,returns-nonnull-attribute,shift,signed-integer-overflow,$\
 undefined,unreachable,vla-bound,vptr
 
+SOURCES=main.cpp solver.cpp io.cpp solverTest.cpp
+OBJECTS=$(SOURCES: .cpp=.o)
+EXECUTABLE=squareSolver
 
-run: squareSolver
+
+all: $(OBJECTS) $(EXECUTABLE)
+
+
+run: $(EXECUTABLE)
 	./$<
 
 
-squareSolver: main.o solver.o io.o io.o solverTest.o
-	$(CC) $(CPPFLAGS) main.o solver.o io.o -o $@
+squareSolver: $(OBJECTS)
+	$(CC) $(CPPFLAGS) $(OBJECTS) -o $@
 
 
-main.o: main.cpp
-	$(CC) -c $(CPPFLAGS) $<
-
-
-solverTest.o: solverTest.cpp solverTest.h
-	$(CC) -c $(CPPFLAGS) $<
-
-
-solver.o: solver.cpp solver.h
-	$(CC) -c $(CPPFLAGS) $<
-
-
-io.o: io.cpp io.h
+%.o: %.cpp
 	$(CC) -c $(CPPFLAGS) $<
 
 
