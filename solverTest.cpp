@@ -34,7 +34,7 @@ const int testCount = sizeof(solverTest) / sizeof(SolverTest);
     
 
 // Run testing SS_solver
-int RunSolverTesting(SolverTest* test) {
+void RunSolverTesting() {
     puts("Testing started.");
     for (int i = 0; i < testCount; i++) {
         squareEquationRoots recievedRoots = SolveEquation(&solverTest[i].equation);
@@ -46,8 +46,6 @@ int RunSolverTesting(SolverTest* test) {
         }
     }
     puts("Testing ended.");
-
-    return 0;
 }
 
 

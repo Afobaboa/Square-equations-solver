@@ -91,6 +91,10 @@ bool ProcessOption(option_t option) {
         RunSolverTesting();
         return true;
     case WRONG_OPTION:
+        fprintf(stderr, "main.cpp: ProcessOption(): ERROR, wrong option.");
         return false;
+    default:    
+        fprintf(stderr, "main.cpp: ProcessOption(): ERROR, option doesn't exist.");
+
     }
 }
