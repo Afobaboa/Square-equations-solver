@@ -25,15 +25,12 @@ return,returns-nonnull-attribute,shift,signed-integer-overflow,$\
 undefined,unreachable,vla-bound,vptr
 
 
-all: squareSolver solverTest
+run: squareSolver
+	./$<
 
 
-squareSolver: main.o SS_solver.o SS_io.o
-	$(CC) $(CPPFLAGS) main.o SS_solver.o SS_io.o -o $@
-
-
-solverTest: solverTest.o SS_solver.o
-	$(CC) $(CPPFLAGS) solverTest.o SS_solver.o -o $@
+squareSolver: main.o solver.o io.o io.o solverTest.o
+	$(CC) $(CPPFLAGS) main.o solver.o io.o -o $@
 
 
 main.o: main.cpp
@@ -44,11 +41,11 @@ solverTest.o: solverTest.cpp solverTest.h
 	$(CC) -c $(CPPFLAGS) $<
 
 
-SS_solver.o: SS_solver.cpp SS_solver.h
+solver.o: solver.cpp solver.h
 	$(CC) -c $(CPPFLAGS) $<
 
 
-SS_io.o: SS_io.cpp SS_io.h
+io.o: io.cpp io.h
 	$(CC) -c $(CPPFLAGS) $<
 
 
