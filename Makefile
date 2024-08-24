@@ -36,11 +36,11 @@ run: $(EXECUTABLE)
 	./$<
 
 
-squareSolver: $(OBJECTS)
+$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CPPFLAGS) $(OBJECTS) -o $@
 
 
-%.o: %.cpp
+%.o: %.cpp %.h
 	$(CC) -c $(CPPFLAGS) $<
 
 
