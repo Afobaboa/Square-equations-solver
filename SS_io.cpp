@@ -5,14 +5,12 @@
 #include "SS_io.h"
 
 
-static bool             IsInputClear();
-static bool             IsFinite(double value);
-static bool             IsEquationFinite(squareEquation* equation);
-static bool             IsEOF();
-static void             InitEquation(squareEquation* equation);
-static void             ClearInput();
-static void             PrintWrongInputMessage();
-static void             InitEquatiton(squareEquation* equation);
+static bool IsInputClear();
+static bool IsFinite(double value);
+static bool IsEquationFinite(squareEquation* equation);
+static bool IsEOF();
+static void ClearInput();
+static void PrintWrongInputMessage();
 
 
 // Clear all stdin
@@ -26,7 +24,6 @@ void ClearInput() {
 // Set user's equation
 bool SetEquation(squareEquation* equation) {
     puts("# Для решения уравнения ax^2 + bx + c = 0, введите a, b, c по порядку:");
-    InitEquation(equation);
 
     while (scanf("%lg %lg %lg", &equation->a, &equation->b, &equation->c) != 3 || 
                                                 !IsEquationFinite(equation) ||
@@ -100,14 +97,6 @@ bool IsFinite(double value) {
         return false;
     }
     return true;
-}
-
-
-// Set coefficients of equation to zeros
-void InitEquation(squareEquation* equation) {
-    equation->a = 0;
-    equation->b = 0;
-    equation->c = 0;
 }
 
 

@@ -1,4 +1,6 @@
-dedFlags=-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall $\
+CC=g++
+
+CPPFLAGS=-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall $\
 -Wextra -Weffc++ -Waggressive-loop-optimizations $\
 -Wc++14-compat -Wmissing-declarations -Wcast-align $\
 -Wcast-qual -Wchar-subscripts -Wconditionally-supported $\
@@ -26,31 +28,29 @@ undefined,unreachable,vla-bound,vptr
 all: squareSolver solverTest
 
 
-squareSolver: main.o SS_solver.o SS_solver.h SS_io.o SS_io.h
-	g++ main.o SS_solver.o SS_io.o -o squareSolver
-	./squareSolver
+squareSolver: main.o SS_solver.o SS_io.o
+	$(CC) $(CPPFLAGS) main.o SS_solver.o SS_io.o -o $@
 
 
 solverTest: solverTest.o SS_solver.o
-	g++ solverTest.o SS_solver.o -o solverTest
-	./solverTest
+	$(CC) $(CPPFLAGS) solverTest.o SS_solver.o -o $@
 
 
 main.o: main.cpp
-	g++ -c main.cpp $(dedFlags)
+	$(CC) -c $(CPPFLAGS) $<
 
 
-solverTest.o: solverTest.cpp
-	g++ -с solverTest.cpp $(dedFlags)
+solverTest.o: solverTest.cpp solverTest.h
+	$(CC) -c $(CPPFLAGS) $<
 
 
-SS_solver.o: SS_solver.cpp
-	g++ -c SS_solver.cpp $(dedFlags)
+SS_solver.o: SS_solver.cpp SS_solver.h
+	$(CC) -c $(CPPFLAGS) $<
 
 
-SS_io.o: SS_io.cpp
-	g++ -с SS_io.cpp $(dedFlags)
+SS_io.o: SS_io.cpp SS_io.h
+	$(CC) -c $(CPPFLAGS) $<
 
 
 clean: 
-	rm -rf *.o all
+	rm -rf *.o
