@@ -4,19 +4,64 @@
 #include "../headers/solver.h"
 
 
+/**
+ * @file
+ * This program used to solve
+ * ready equation.
+ */
+
+
+/** 
+ * This function solve linear
+ * equation. FIRST COEFFICIEN 
+ * (a) MUST BE ZERO, else there
+ * will be wrong roots.
+ * 
+ * @return roots of this equation.
+ */
 static squareEquationRoots SolveLinearEquation(squareEquation* equation);
+
+
+/** 
+ * This function solve square
+ * equations, wheer first
+ * coefficient HAVE TO BE NOT
+ * ZERO.
+ * 
+ * @return Roots of this equation.
+ */
 static squareEquationRoots SolveSquareEquation(squareEquation* equation);
-static void                SetZeroRoots(squareEquationRoots* roots); 
-static double              GetDiscriminant(squareEquation equation);
-static bool                IsZero(double value);
+
+
+/**
+ * If there are roots like 0.0000001,
+ * this function set they to 0.
+ */
+static void SetZeroRoots(squareEquationRoots* roots); 
+
+
+/** 
+ * @return Discriminant of square
+ * equation. First coefficient (a)
+ * have to be not zero.
+ */
+static double GetDiscriminant(squareEquation equation);
+
+
+/**
+ * Check if value is double zero.
+ * EPSILON is used for compare.
+ */
+static bool IsZero(double value);
 
 
 
-// This const double is used to copmare double values with zero
+/** 
+ * This const double is used to copmare double values with zero
+ */
 static const double EPSILON = 1E-5;
 
 
-// Solve ax^2 + bx + c = 0 equation, a can be zero
 squareEquationRoots SolveEquation(squareEquation* equation) {
     assert(equation);
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
@@ -33,7 +78,6 @@ squareEquationRoots SolveEquation(squareEquation* equation) {
 }
 
 
-// Solve ax^2 + bx + c = 0 equation, a CAN'T be zero
 static squareEquationRoots SolveSquareEquation(squareEquation* equation) {
     assert(equation);
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
@@ -56,7 +100,6 @@ static squareEquationRoots SolveSquareEquation(squareEquation* equation) {
 }
 
 
-// Solve bx + c = 0
 static squareEquationRoots SolveLinearEquation(squareEquation* equation) {
     assert(equation);
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
@@ -76,7 +119,6 @@ static squareEquationRoots SolveLinearEquation(squareEquation* equation) {
 }
 
 
-// Is value a double 0?
 static bool IsZero(double value) {
     if (fabs(value) <= EPSILON)
         return true;
@@ -84,14 +126,11 @@ static bool IsZero(double value) {
 }
 
 
-// Get discriminant of square equation
 static double GetDiscriminant(squareEquation equation) {
     return equation.b * equation.b  -  4 * equation.a * equation.c;
 }
 
 
-// If roots are less than EPSILON
-// they will be change to 0.0
 static void SetZeroRoots(squareEquationRoots* roots) {
     assert(roots);
     if (IsZero(roots->x1)) 
@@ -101,7 +140,6 @@ static void SetZeroRoots(squareEquationRoots* roots) {
 }
 
 
-// Reurn true if roots are equal, else rutern false
 bool AreRootsEqual(squareEquationRoots* firstRoots, squareEquationRoots* secondRoots) {
     assert(firstRoots || secondRoots);
     if (firstRoots->rootCount == secondRoots->rootCount &&

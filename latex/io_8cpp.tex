@@ -1,0 +1,98 @@
+\hypertarget{io_8cpp}{}\doxysection{sources/io.cpp File Reference}
+\label{io_8cpp}\index{sources/io.cpp@{sources/io.cpp}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/io.\+h\char`\"{}}\newline
+Include dependency graph for io.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{io_8cpp_ad86358bf19927183dd7b4ae215a29731}{COLOR\+\_\+\+RED}}~\char`\"{}\textbackslash{}x1b\mbox{[}31m\char`\"{}
+\item 
+\mbox{\Hypertarget{io_8cpp_afc9149f5de51bd9ac4f5ebbfa153f018}\label{io_8cpp_afc9149f5de51bd9ac4f5ebbfa153f018}} 
+\#define {\bfseries COLOR\+\_\+\+GREEN}~\char`\"{}\textbackslash{}x1b\mbox{[}32m\char`\"{}
+\item 
+\mbox{\Hypertarget{io_8cpp_a17f760256046df23dd0ab46602f04d02}\label{io_8cpp_a17f760256046df23dd0ab46602f04d02}} 
+\#define {\bfseries COLOR\+\_\+\+RESET}~\char`\"{}\textbackslash{}x1b\mbox{[}0m\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{io_8cpp_a0690c5f090d64b8886487ad9fd216368}{Set\+Equation}} (\mbox{\hyperlink{structsquareEquation}{square\+Equation}} $\ast$equation)
+\item 
+void \mbox{\hyperlink{io_8cpp_aa39e27639824b9b8f7d5d846535623df}{Print\+Roots}} (\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$roots)
+\item 
+int \mbox{\hyperlink{io_8cpp_a2a588c77a0776873eb223f57db0bb1d5}{Colored\+Printf}} (color\+\_\+t color, const char $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program used to get users input and write something to terminal. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{io_8cpp_ad86358bf19927183dd7b4ae215a29731}\label{io_8cpp_ad86358bf19927183dd7b4ae215a29731}} 
+\index{io.cpp@{io.cpp}!COLOR\_RED@{COLOR\_RED}}
+\index{COLOR\_RED@{COLOR\_RED}!io.cpp@{io.cpp}}
+\doxysubsubsection{\texorpdfstring{COLOR\_RED}{COLOR\_RED}}
+{\footnotesize\ttfamily \#define COLOR\+\_\+\+RED~\char`\"{}\textbackslash{}x1b\mbox{[}31m\char`\"{}}
+
+defines used to set colors for Colored\+Print() and Print\+Color(). 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{io_8cpp_a2a588c77a0776873eb223f57db0bb1d5}\label{io_8cpp_a2a588c77a0776873eb223f57db0bb1d5}} 
+\index{io.cpp@{io.cpp}!ColoredPrintf@{ColoredPrintf}}
+\index{ColoredPrintf@{ColoredPrintf}!io.cpp@{io.cpp}}
+\doxysubsubsection{\texorpdfstring{ColoredPrintf()}{ColoredPrintf()}}
+{\footnotesize\ttfamily int Colored\+Printf (\begin{DoxyParamCaption}\item[{color\+\_\+t}]{color,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+This function is similary to printf(), but this function can print colored text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Color of text. You have to use something from enum COLORS. \\
+\hline
+{\em format} & Format of your text. You have to use printf() format\\
+\hline
+\end{DoxyParams}
+Other arguments used for subtitution to format. You have to use as many arguments as you us in format, like in printf().
+
+\begin{DoxyReturn}{Returns}
+Count of used other arguments. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8cpp_aa39e27639824b9b8f7d5d846535623df}\label{io_8cpp_aa39e27639824b9b8f7d5d846535623df}} 
+\index{io.cpp@{io.cpp}!PrintRoots@{PrintRoots}}
+\index{PrintRoots@{PrintRoots}!io.cpp@{io.cpp}}
+\doxysubsubsection{\texorpdfstring{PrintRoots()}{PrintRoots()}}
+{\footnotesize\ttfamily void Print\+Roots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$}]{equation }\end{DoxyParamCaption})}
+
+Print all roots if equation according to count of roots.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & User\textquotesingle{}s equation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{io_8cpp_a0690c5f090d64b8886487ad9fd216368}\label{io_8cpp_a0690c5f090d64b8886487ad9fd216368}} 
+\index{io.cpp@{io.cpp}!SetEquation@{SetEquation}}
+\index{SetEquation@{SetEquation}!io.cpp@{io.cpp}}
+\doxysubsubsection{\texorpdfstring{SetEquation()}{SetEquation()}}
+{\footnotesize\ttfamily bool Set\+Equation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsquareEquation}{square\+Equation}} $\ast$}]{equation }\end{DoxyParamCaption})}
+
+Set coefficients of square equation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & \mbox{\hyperlink{structsquareEquation}{square\+Equation}} to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if OK. 
+
+false if EOF is next in stdin
+\end{DoxyReturn}
+Elements of equation will be zeroes by default. 

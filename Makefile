@@ -31,6 +31,7 @@ EXECUTABLE=squareSolver
 
 
 all: $(OBJECTS) $(EXECUTABLE)
+	doxygen
 
 
 test: $(EXECUTABLE)

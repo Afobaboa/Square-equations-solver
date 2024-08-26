@@ -7,21 +7,90 @@
 #include "../headers/io.h"
 
 
+/** 
+ * @file 
+ * This program used 
+ * to get users input 
+ * and write something
+ * to terminal.
+ */
+
+
+/** defines used to set colors 
+ * for ColoredPrint() and 
+ * PrintColor().
+ */
 #define COLOR_RED   "\x1b[31m"
 #define COLOR_GREEN "\x1b[32m"
 #define COLOR_RESET "\x1b[0m"
 
 
+/**
+ * Check is stdin clear until
+ * EOF or '\n' (until nearest 
+ * symbol).
+ * 
+ * @return true if there are only 
+ * spaces between begin of stdin 
+ * and nearest '\n' or EOF,
+ * @return false in other situations.
+ */
 static bool IsInputClear();
+
+
+/**
+ * Check if value is finit 
+ * (not +-inf or nan).
+ * 
+ * @return true if value is finite,
+ * @return false in other situations.
+ */
 static bool IsFinite(double value);
+
+
+/**
+ * This function chek if coefficients
+ * of equation are finite (not +-inf or nan)
+ * 
+ * @return true if they are finite,
+ * @return false in other situatiions.
+ */
 static bool IsEquationFinite(squareEquation* equation);
+
+
+/**
+ * This functions chek if
+ * next char in stdin is EOF.
+ * 
+ * @return true if there is EOF,
+ * @return false in other situations.
+ */
 static bool IsEOF();
+
+
+/**
+ * Clear all chars from stdin 
+ * until '\n' or EOF isn't here
+ */
 static void ClearInput();
+
+
+/**
+ * Print special message if user 
+ * write input in wrong format.
+ */
 static void PrintWrongInputMessage();
+
+
+/** 
+ * Print needed color (used defines).
+ * 
+ * This function used to make 
+ * ColoredPrintf() more universal.
+ */
 static void PrintColor(color_t color);
 
 
-// Clear all stdin
 static void ClearInput() {
     int c = getchar();
     while (c != '\n' && c != EOF) 
@@ -29,7 +98,6 @@ static void ClearInput() {
 }
 
 
-// Set user's equation
 bool SetEquation(squareEquation* equation) {
     puts("# Для решения уравнения ax^2 + bx + c = 0, введите a, b, c по порядку:");
 
@@ -45,7 +113,6 @@ bool SetEquation(squareEquation* equation) {
 }
 
 
-// Is there any input?
 static bool IsInputClear() {
     int c = 0;
     do {
@@ -58,7 +125,6 @@ static bool IsInputClear() {
 }
 
 
-// Print roots of user's equation
 void PrintRoots(squareEquationRoots* roots) {
     switch (roots->rootCount) {
     case INFINITE_ROOT_COUNT: 
@@ -80,13 +146,11 @@ void PrintRoots(squareEquationRoots* roots) {
 }
 
 
-// Print this message if input is wrong
 static void PrintWrongInputMessage() {
     puts("# Неверный ввод. Попробуйте ввести все сначала.");
 }
 
 
-// If coefficients of equation are finite?
 bool IsEquationFinite(squareEquation* equation) {
     bool result = true;
     if (!IsFinite(equation->a))
@@ -99,7 +163,6 @@ bool IsEquationFinite(squareEquation* equation) {
 }
 
 
-// Is double value finite?
 static bool IsFinite(double value) {
     if (!isfinite(value) || isinf(value)) {
         return false;
@@ -108,7 +171,6 @@ static bool IsFinite(double value) {
 }
 
 
-// If EOF is next in stdin?
 static bool IsEOF() {
     int c = getchar();
     if (c == EOF)
@@ -117,7 +179,6 @@ static bool IsEOF() {
 }
 
 
-// printf() but text is GREEN
 int ColoredPrintf(color_t color, const char* format, ...) {
     va_list args;
     va_start(args, format);
@@ -129,7 +190,6 @@ int ColoredPrintf(color_t color, const char* format, ...) {
 }
 
 
-// Change color of text to choosed color
 void PrintColor(color_t color) {
     switch(color) {
     case GREEN:

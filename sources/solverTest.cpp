@@ -5,16 +5,33 @@
 #include "../headers/solverTest.h"
 
 
+/**
+ * @file
+ * This program is used
+ * for testing soler.cpp.
+ */
+
+
+/**
+ * This function print all
+ * information about wrong 
+ * test to terminal.
+ */
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots);
 
 
-// Interface of tests
+/**
+ * Interface of tests.
+ */
 struct SolverTest {
     squareEquation equation;
     squareEquationRoots expectedRoots;
 };
 
 
+/**
+ * There are tests for solver.cpp
+ */
 static SolverTest solverTest[] = {
 //  {{ a,          b,          c       },   {rootCount,             x1,         x2      }}
     {{ 1,          1,          1       },   {NO_ROOTS,              0,          0       }},  // 0
@@ -34,7 +51,6 @@ static SolverTest solverTest[] = {
 const int testCount = sizeof(solverTest) / sizeof(SolverTest);
     
 
-// Run testing SS_solver
 void RunSolverTesting() {
     puts("Testing started.");
     for (int i = 0; i < testCount; i++) {

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['printded_12',['PrintDED',['../CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a',1,'CmdLineArgsHandlers.h']]],
-  ['printhelp_13',['PrintHelp',['../CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef',1,'CmdLineArgsHandlers.h']]],
-  ['printroots_14',['PrintRoots',['../io_8h.html#a7eefd2afed42a9004ed3bb3f063c18cd',1,'io.h']]]
+  ['one_5froot_14',['ONE_ROOT',['../squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf',1,'squareEquation.h']]],
+  ['options_15',['OPTIONS',['../CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c',1,'CmdLineArgsHandlers.h']]]
 ];

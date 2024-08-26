@@ -4,7 +4,14 @@
 #include "../headers/CmdLineArgsHandlers.h"
 
 
-// Prints special message if there is -help
+/**
+ * @file 
+ * This file is used for 
+ * processing comand line 
+ * options.
+ */
+
+
 void PrintHelp() {
     puts("Вас приветствует программа Square Solver!\n"
          "Для пользования программой введитe './squareSolver [ОПЦИЯ]'\n\n"
@@ -15,7 +22,6 @@ void PrintHelp() {
 }
 
 
-// Easter egg
 void PrintDED() {
     for (int i = 0; i < 32; i++)
         printf("бу");
@@ -23,7 +29,6 @@ void PrintDED() {
 }
 
 
-// Run solving 
 void RunSolving() {
     puts("# Эта программа умеет решать квадратные уравнения "
          "в вещественных числах! Попоробуй сам!\n"
