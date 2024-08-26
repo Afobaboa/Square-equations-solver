@@ -24,8 +24,9 @@ integer-divide-by-zero,leak,nonnull-attribute,null,object-size,$\
 return,returns-nonnull-attribute,shift,signed-integer-overflow,$\
 undefined,unreachable,vla-bound,vptr
 
-SOURCES=main.cpp solver.cpp io.cpp solverTest.cpp
-OBJECTS=$(SOURCES: .cpp=.o)
+SOURCES=$(wildcard sources/*.cpp)
+HEADERS=$(wildcard sources/*.h)
+OBJECTS=$(patsubst sources/%.cpp,objects/%.o,$(SOURCES))
 EXECUTABLE=squareSolver
 
 
@@ -44,9 +45,9 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CPPFLAGS) $(OBJECTS) -o $@
 
 
-%.o: %.cpp %.h
-	$(CC) -c $(CPPFLAGS) $<
+$(OBJECTS): objects/%.o: sources/%.cpp $(HEADERS)
+	$(CC) -c $(CPPFLAGS) $< -o $@
 
 
 clean: 
-	rm -rf *.o
+	rm -rf $(OBJECTS) $(EXECUTABLE)
