@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['root_5fcount_25',['ROOT_COUNT',['../SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05',1,'SS_squareEquation.h']]]
+  ['colors_47',['COLORS',['../io_8h.html#ab983350d6d1201c0ebd709320e7a0d50',1,'io.h']]]
 ];

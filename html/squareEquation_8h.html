@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square equaions solver: squareEquation.h File Reference</title>
+<title>Square equaions solver: headers/squareEquation.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,6 +61,10 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -71,16 +75,10 @@ $(function() {
 <div class="title">squareEquation.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="SS__errors_8h_source.html">SS_errors.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for squareEquation.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="squareEquation_8h__incl.png" border="0" usemap="#asquareEquation_8h" alt=""/></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="squareEquation_8h__dep__incl.png" border="0" usemap="#asquareEquation_8hdep" alt=""/></div>
+<div class="center"><img src="squareEquation_8h__dep__incl.png" border="0" usemap="#aheaders_2squareEquation_8hdep" alt=""/></div>
 </div>
 </div>
 <p><a href="squareEquation_8h_source.html">Go to the source code of this file.</a></p>
@@ -100,10 +98,10 @@ typedef enum <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a54e76d3d5c72248f406cbb9dac41fc05"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a> { <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a>
-, <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>
-, <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>
-, <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>
+<tr class="memitem:a54e76d3d5c72248f406cbb9dac41fc05"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a> { <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a> = 0
+, <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a> = 1
+, <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a> = 2
+, <a class="el" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a>
  }</td></tr>
 <tr class="separator:a54e76d3d5c72248f406cbb9dac41fc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -123,13 +121,13 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>There are root count codes. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a"></a>INFINITE_ROOT_COUNT&#160;</td><td class="fielddoc"><p>Equation has infinity of roots. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c"></a>NO_ROOTS&#160;</td><td class="fielddoc"><p>Equation has't any roots. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c"></a>NO_ROOTS&#160;</td><td class="fielddoc"><p>Equation has't any roots. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf"></a>ONE_ROOT&#160;</td><td class="fielddoc"><p>Equation has one root. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81"></a>TWO_ROOTS&#160;</td><td class="fielddoc"><p>Equation has two roots. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a"></a>INFINITE_ROOT_COUNT&#160;</td><td class="fielddoc"><p>Equation has infinity of roots. </p>
 </td></tr>
 </table>
 

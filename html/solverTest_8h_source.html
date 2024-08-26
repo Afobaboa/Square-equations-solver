@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square equaions solver: solverTest.h Source File</title>
+<title>Square equaions solver: headers/solverTest.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,7 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,45 +61,25 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">solverTest.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SS__squareEquation_8h.html">SS_squareEquation.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<a href="solverTest_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SOOLVER_TEST_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SOOLVER_TEST_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="structSolverTest.html">    4</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structSolverTest.html">SolverTest</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="structsquareEquation.html">squareEquation</a> equation;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="structsquareEquationRoots.html">squareEquationRoots</a> expectedRoots;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;};</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="structSolverTest.html">SolverTest</a> solverTest[] = {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//  {{ a,          b,          c       },   {rootCount,             x1,         x2      }}</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {{ 1,          1,          1       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>,              0,          0       }},  <span class="comment">// 0</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {{ 0.000001,   0,          1       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>,              0,          0       }},  <span class="comment">// 1</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {{ 0,          0,          0       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a>,   0,          0       }},  <span class="comment">// 2</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {{ 0.000001,   5,          0.000001},   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>,              0,          0       }},  <span class="comment">// 3</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {{ 1,         -2,          1       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>,              1,          0       }},  <span class="comment">// 4</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {{ 5,          0,          0       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>,              0,          0       }},  <span class="comment">// 5</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {{-1.3,        3.434532,  -3       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>,              0,          0       }},  <span class="comment">// 6</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {{ 2,          6,          3       },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>,            -2.366025,  -0.633975}},  <span class="comment">// 7</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {{-1.234,      323,        323.23  },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>,             262.74732, -0.996915}},  <span class="comment">// 8</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {{ 23443,      2345,      -42873   },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>,            -1.403278,   1.303248}},  <span class="comment">// 9</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {{ 1,          1,          -12     },   {<a class="code" href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>,             -4,         3       }},  <span class="comment">// 10</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> testCount = <span class="keyword">sizeof</span>(solverTest) / <span class="keyword">sizeof</span>(<a class="code" href="structSolverTest.html">SolverTest</a>);</div>
-<div class="ttc" id="aSS__squareEquation_8h_html"><div class="ttname"><a href="SS__squareEquation_8h.html">SS_squareEquation.h</a></div></div>
-<div class="ttc" id="aSS__squareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a"><div class="ttname"><a href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a></div><div class="ttdeci">@ INFINITE_ROOT_COUNT</div><div class="ttdef"><b>Definition:</b> SS_squareEquation.h:19</div></div>
-<div class="ttc" id="aSS__squareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf"><div class="ttname"><a href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a></div><div class="ttdeci">@ ONE_ROOT</div><div class="ttdef"><b>Definition:</b> SS_squareEquation.h:17</div></div>
-<div class="ttc" id="aSS__squareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81"><div class="ttname"><a href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a></div><div class="ttdeci">@ TWO_ROOTS</div><div class="ttdef"><b>Definition:</b> SS_squareEquation.h:18</div></div>
-<div class="ttc" id="aSS__squareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c"><div class="ttname"><a href="SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a></div><div class="ttdeci">@ NO_ROOTS</div><div class="ttdef"><b>Definition:</b> SS_squareEquation.h:16</div></div>
-<div class="ttc" id="astructSolverTest_html"><div class="ttname"><a href="structSolverTest.html">SolverTest</a></div><div class="ttdef"><b>Definition:</b> solverTest.h:4</div></div>
-<div class="ttc" id="astructsquareEquationRoots_html"><div class="ttname"><a href="structsquareEquationRoots.html">squareEquationRoots</a></div><div class="ttdef"><b>Definition:</b> SS_squareEquation.h:32</div></div>
-<div class="ttc" id="astructsquareEquation_html"><div class="ttname"><a href="structsquareEquation.html">squareEquation</a></div><div class="ttdef"><b>Definition:</b> SS_squareEquation.h:46</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="solverTest_8h.html#a7a43d205b2e19589a185a5b04cd359ab">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solverTest_8h.html#a7a43d205b2e19589a185a5b04cd359ab">RunSolverTesting</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SOOLVER_TEST_H</span></div>
+<div class="ttc" id="asolverTest_8h_html_a7a43d205b2e19589a185a5b04cd359ab"><div class="ttname"><a href="solverTest_8h.html#a7a43d205b2e19589a185a5b04cd359ab">RunSolverTesting</a></div><div class="ttdeci">void RunSolverTesting()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

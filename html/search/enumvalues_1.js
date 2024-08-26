@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['no_5froots_27',['NO_ROOTS',['../SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c',1,'SS_squareEquation.h']]]
+  ['green_51',['GREEN',['../io_8h.html#ab983350d6d1201c0ebd709320e7a0d50aa60bd322f93178d68184e30e162571ca',1,'io.h']]]
 ];

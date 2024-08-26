@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setequation_29',['SetEquation',['../SS__io_8h.html#a01a618f9111fea63af9b672b2cef91a5',1,'SS_io.cpp']]],
-  ['solveequation_30',['SolveEquation',['../SS__solver_8h.html#afbd5e6b906c7eecb77092a8bf8b707bd',1,'SS_solver.cpp']]]
+  ['runsolvertesting_43',['RunSolverTesting',['../solverTest_8h.html#a7a43d205b2e19589a185a5b04cd359ab',1,'solverTest.h']]],
+  ['runsolving_44',['RunSolving',['../CmdLineArgsHandlers_8h.html#ac50e691af23568669d7862d675e94b0a',1,'CmdLineArgsHandlers.h']]]
 ];

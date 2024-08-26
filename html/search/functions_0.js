@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isrootsequal_21',['IsRootsEqual',['../SS__solver_8h.html#a7f65fd25044f58128752bc886efbc493',1,'SS_solver.cpp']]]
+  ['arerootsequal_38',['AreRootsEqual',['../solver_8h.html#a1675807a6fd8b91b75c2967bb3700239',1,'solver.h']]]
 ];

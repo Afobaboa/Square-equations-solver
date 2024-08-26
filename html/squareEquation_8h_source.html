@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square equaions solver: squareEquation.h Source File</title>
+<title>Square equaions solver: headers/squareEquation.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,7 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,6 +61,11 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">squareEquation.h</div>  </div>
@@ -71,42 +75,38 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SQUARE_EQUATION_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SS__errors_8h.html">SS_errors.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">   18</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">   19</a></span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a>,    </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">   20</a></span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>,               </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">   21</a></span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>,               </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>               </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">   23</a></span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">   15</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">   16</a></span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a> = 0,               </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">   17</a></span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a> = 1,               </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">   18</a></span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a> = 2,              </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a>         </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">   20</a></span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a> rootCount_t;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a> rootCount_t;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structsquareEquationRoots.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsquareEquationRoots.html">squareEquationRoots</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    rootCount_t rootCount;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span> x1; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">double</span> x2;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structsquareEquation.html">   49</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsquareEquation.html">squareEquation</a> { </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span> a;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">double</span> b;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">double</span> c;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SQUARE_EQUATION_H</span></div>
-<div class="ttc" id="aSS__errors_8h_html"><div class="ttname"><a href="SS__errors_8h.html">SS_errors.h</a></div></div>
-<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a></div><div class="ttdeci">ROOT_COUNT</div><div class="ttdef"><b>Definition:</b> squareEquation.h:18</div></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structsquareEquationRoots.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsquareEquationRoots.html">squareEquationRoots</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    rootCount_t rootCount;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">double</span> x1; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">double</span> x2;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structsquareEquation.html">   46</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsquareEquation.html">squareEquation</a> { </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">double</span> a;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> b;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> c;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SQUARE_EQUATION_H</span></div>
+<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05">ROOT_COUNT</a></div><div class="ttdeci">ROOT_COUNT</div><div class="ttdef"><b>Definition:</b> squareEquation.h:15</div></div>
 <div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a">INFINITE_ROOT_COUNT</a></div><div class="ttdeci">@ INFINITE_ROOT_COUNT</div><div class="ttdef"><b>Definition:</b> squareEquation.h:19</div></div>
-<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a></div><div class="ttdeci">@ ONE_ROOT</div><div class="ttdef"><b>Definition:</b> squareEquation.h:21</div></div>
-<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a></div><div class="ttdeci">@ TWO_ROOTS</div><div class="ttdef"><b>Definition:</b> squareEquation.h:22</div></div>
-<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a></div><div class="ttdeci">@ NO_ROOTS</div><div class="ttdef"><b>Definition:</b> squareEquation.h:20</div></div>
-<div class="ttc" id="astructsquareEquationRoots_html"><div class="ttname"><a href="structsquareEquationRoots.html">squareEquationRoots</a></div><div class="ttdef"><b>Definition:</b> squareEquation.h:35</div></div>
-<div class="ttc" id="astructsquareEquation_html"><div class="ttname"><a href="structsquareEquation.html">squareEquation</a></div><div class="ttdef"><b>Definition:</b> squareEquation.h:49</div></div>
+<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a></div><div class="ttdeci">@ ONE_ROOT</div><div class="ttdef"><b>Definition:</b> squareEquation.h:17</div></div>
+<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a></div><div class="ttdeci">@ TWO_ROOTS</div><div class="ttdef"><b>Definition:</b> squareEquation.h:18</div></div>
+<div class="ttc" id="asquareEquation_8h_html_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c"><div class="ttname"><a href="squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a></div><div class="ttdeci">@ NO_ROOTS</div><div class="ttdef"><b>Definition:</b> squareEquation.h:16</div></div>
+<div class="ttc" id="astructsquareEquationRoots_html"><div class="ttname"><a href="structsquareEquationRoots.html">squareEquationRoots</a></div><div class="ttdef"><b>Definition:</b> squareEquation.h:32</div></div>
+<div class="ttc" id="astructsquareEquation_html"><div class="ttname"><a href="structsquareEquation.html">squareEquation</a></div><div class="ttdef"><b>Definition:</b> squareEquation.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

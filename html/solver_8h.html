@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square equaions solver: solver.h File Reference</title>
+<title>Square equaions solver: headers/solver.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,6 +61,10 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -73,21 +77,56 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for solver.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="solver_8h__incl.png" border="0" usemap="#asolver_8h" alt=""/></div>
+<div class="center"><img src="solver_8h__incl.png" border="0" usemap="#aheaders_2solver_8h" alt=""/></div>
 </div>
 </div>
 <p><a href="solver_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afbd5e6b906c7eecb77092a8bf8b707bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8h.html#afbd5e6b906c7eecb77092a8bf8b707bd">SolveEquation</a> (<a class="el" href="structsquareEquation.html">squareEquation</a> equation)</td></tr>
-<tr class="separator:afbd5e6b906c7eecb77092a8bf8b707bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad95369f7091b5a158d4d4a67fe5dc44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8h.html#aad95369f7091b5a158d4d4a67fe5dc44">SolveEquation</a> (<a class="el" href="structsquareEquation.html">squareEquation</a> *equation)</td></tr>
+<tr class="separator:aad95369f7091b5a158d4d4a67fe5dc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1675807a6fd8b91b75c2967bb3700239"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8h.html#a1675807a6fd8b91b75c2967bb3700239">AreRootsEqual</a> (<a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *firstRoots, <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *secondRoots)</td></tr>
+<tr class="separator:a1675807a6fd8b91b75c2967bb3700239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This header let you solve square equations. </p>
+<div class="textblock"><p>This file let you solve square equations.</p>
+<p>Accuracy of calculations is E-5. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="afbd5e6b906c7eecb77092a8bf8b707bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbd5e6b906c7eecb77092a8bf8b707bd">&#9670;&nbsp;</a></span>SolveEquation()</h2>
+<a id="a1675807a6fd8b91b75c2967bb3700239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1675807a6fd8b91b75c2967bb3700239">&#9670;&nbsp;</a></span>AreRootsEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AreRootsEqual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *&#160;</td>
+          <td class="paramname"><em>firstRoots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *&#160;</td>
+          <td class="paramname"><em>secondRoots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function used to compare two roots.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if roots are equal. </dd>
+<dd>
+false if roots are not equal. </dd></dl>
+
+</div>
+</div>
+<a id="aad95369f7091b5a158d4d4a67fe5dc44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad95369f7091b5a158d4d4a67fe5dc44">&#9670;&nbsp;</a></span>SolveEquation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,7 +134,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> SolveEquation </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsquareEquation.html">squareEquation</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structsquareEquation.html">squareEquation</a> *&#160;</td>
           <td class="paramname"><em>equation</em></td><td>)</td>
           <td></td>
         </tr>
@@ -108,7 +147,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Struct <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> from "squareEquation.h" which contain count of equation's roots and roots. If there are infinity rootsor zero roots, x1 and x2 may be random double. If there is one root, this root is x1, then x2 may be random double. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Struct <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> from "squareEquation.h". Accuracy is equal to EPSILON. </dd>
+<dd>
+If there are two roots, x1 will be less than x2. </dd>
+<dd>
+If there are not two roots, they will be equal to zero. </dd></dl>
 
 </div>
 </div>

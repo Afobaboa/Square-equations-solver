@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['setequation_11',['SetEquation',['../SS__io_8h.html#a01a618f9111fea63af9b672b2cef91a5',1,'SS_io.cpp']]],
-  ['solveequation_12',['SolveEquation',['../SS__solver_8h.html#afbd5e6b906c7eecb77092a8bf8b707bd',1,'SS_solver.cpp']]],
-  ['solvertest_13',['SolverTest',['../structSolverTest.html',1,'']]],
-  ['squareequation_14',['squareEquation',['../structsquareEquation.html',1,'']]],
-  ['squareequationroots_15',['squareEquationRoots',['../structsquareEquationRoots.html',1,'']]],
-  ['ss_5fio_2eh_16',['SS_io.h',['../SS__io_8h.html',1,'']]],
-  ['ss_5fsolver_2eh_17',['SS_solver.h',['../SS__solver_8h.html',1,'']]],
-  ['ss_5fsquareequation_2eh_18',['SS_squareEquation.h',['../SS__squareEquation_8h.html',1,'']]]
+  ['printded_12',['PrintDED',['../CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a',1,'CmdLineArgsHandlers.h']]],
+  ['printhelp_13',['PrintHelp',['../CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef',1,'CmdLineArgsHandlers.h']]],
+  ['printroots_14',['PrintRoots',['../io_8h.html#a7eefd2afed42a9004ed3bb3f063c18cd',1,'io.h']]]
 ];

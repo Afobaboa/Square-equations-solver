@@ -2,6 +2,18 @@
 #define SOOLVER_TEST_H
 
 
+/**
+ * @file
+ * This file used to
+ * testing squareSolver.
+ */
+
+
+/**
+ * This function used 
+ * to run testing of 
+ * solver.cpp.
+ */
 void RunSolverTesting();
 
 

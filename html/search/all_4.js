@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['root_5fcount_5',['ROOT_COUNT',['../SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05',1,'SS_squareEquation.h']]]
+  ['help_6',['HELP',['../CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca9f5cb747b2e1f0ea781d2b1f2a5b4824',1,'CmdLineArgsHandlers.h']]]
 ];

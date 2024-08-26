@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['no_5froots_2',['NO_ROOTS',['../SS__squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c',1,'SS_squareEquation.h']]]
+  ['cmdlineargshandlers_2eh_1',['CmdLineArgsHandlers.h',['../CmdLineArgsHandlers_8h.html',1,'']]],
+  ['coloredprintf_2',['ColoredPrintf',['../io_8h.html#a2a588c77a0776873eb223f57db0bb1d5',1,'io.h']]],
+  ['colors_3',['COLORS',['../io_8h.html#ab983350d6d1201c0ebd709320e7a0d50',1,'io.h']]]
 ];

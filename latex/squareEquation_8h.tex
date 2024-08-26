@@ -1,10 +1,7 @@
-\hypertarget{squareEquation_8h}{}\doxysection{square\+Equation.\+h File Reference}
-\label{squareEquation_8h}\index{squareEquation.h@{squareEquation.h}}
-{\ttfamily \#include \char`\"{}SS\+\_\+errors.\+h\char`\"{}}\newline
-Include dependency graph for square\+Equation.\+h\+:
-% FIG 0
+\hypertarget{squareEquation_8h}{}\doxysection{headers/square\+Equation.h File Reference}
+\label{squareEquation_8h}\index{headers/squareEquation.h@{headers/squareEquation.h}}
 This graph shows which files directly or indirectly include this file\+:
-% FIG 1
+% FIG 0
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,10 +18,10 @@ typedef enum \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc0
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05}{ROOT\+\_\+\+COUNT}} \{ \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}{INFINITE\+\_\+\+ROOT\+\_\+\+COUNT}}
-, \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}{NO\+\_\+\+ROOTS}}
-, \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf}{ONE\+\_\+\+ROOT}}
-, \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}}
+enum \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05}{ROOT\+\_\+\+COUNT}} \{ \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}{NO\+\_\+\+ROOTS}} = 0
+, \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf}{ONE\+\_\+\+ROOT}} = 1
+, \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}} = 2
+, \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}{INFINITE\+\_\+\+ROOT\+\_\+\+COUNT}}
  \}
 \end{DoxyCompactItemize}
 
@@ -40,10 +37,6 @@ There is interface to work with square equations.
 {\footnotesize\ttfamily enum \mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05}{ROOT\+\_\+\+COUNT}}}
 
 There are root count codes. \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INFINITE\_ROOT\_COUNT@{INFINITE\_ROOT\_COUNT}!squareEquation.h@{squareEquation.h}}\index{squareEquation.h@{squareEquation.h}!INFINITE\_ROOT\_COUNT@{INFINITE\_ROOT\_COUNT}}}\mbox{\Hypertarget{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}\label{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}} 
-INFINITE\+\_\+\+ROOT\+\_\+\+COUNT&Equation has infinity of roots. \\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_ROOTS@{NO\_ROOTS}!squareEquation.h@{squareEquation.h}}\index{squareEquation.h@{squareEquation.h}!NO\_ROOTS@{NO\_ROOTS}}}\mbox{\Hypertarget{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}\label{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}} 
 NO\+\_\+\+ROOTS&Equation has\textquotesingle{}t any roots. \\
 \hline
@@ -54,6 +47,10 @@ ONE\+\_\+\+ROOT&Equation has one root. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!squareEquation.h@{squareEquation.h}}\index{squareEquation.h@{squareEquation.h}!TWO\_ROOTS@{TWO\_ROOTS}}}\mbox{\Hypertarget{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}\label{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}} 
 TWO\+\_\+\+ROOTS&Equation has two roots. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFINITE\_ROOT\_COUNT@{INFINITE\_ROOT\_COUNT}!squareEquation.h@{squareEquation.h}}\index{squareEquation.h@{squareEquation.h}!INFINITE\_ROOT\_COUNT@{INFINITE\_ROOT\_COUNT}}}\mbox{\Hypertarget{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}\label{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}} 
+INFINITE\+\_\+\+ROOT\+\_\+\+COUNT&Equation has infinity of roots. \\
 \hline
 
 \end{DoxyEnumFields}

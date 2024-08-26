@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <math.h>
 #include <stdbool.h>
 #include "../headers/solver.h"
@@ -17,6 +18,7 @@ static const double EPSILON = 1E-5;
 
 // Solve ax^2 + bx + c = 0 equation, a can be zero
 squareEquationRoots SolveEquation(squareEquation* equation) {
+    assert(equation);
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
                                   .x1 = 0,
                                   .x2 = 0};
@@ -33,6 +35,7 @@ squareEquationRoots SolveEquation(squareEquation* equation) {
 
 // Solve ax^2 + bx + c = 0 equation, a CAN'T be zero
 static squareEquationRoots SolveSquareEquation(squareEquation* equation) {
+    assert(equation);
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
                                   .x1 = 0,
                                   .x2 = 0};
@@ -55,6 +58,7 @@ static squareEquationRoots SolveSquareEquation(squareEquation* equation) {
 
 // Solve bx + c = 0
 static squareEquationRoots SolveLinearEquation(squareEquation* equation) {
+    assert(equation);
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
                                   .x1 = 0,
                                   .x2 = 0};
@@ -89,6 +93,7 @@ static double GetDiscriminant(squareEquation equation) {
 // If roots are less than EPSILON
 // they will be change to 0.0
 static void SetZeroRoots(squareEquationRoots* roots) {
+    assert(roots);
     if (IsZero(roots->x1)) 
         roots->x1 = 0;
     if (IsZero(roots->x2)) 
@@ -98,6 +103,7 @@ static void SetZeroRoots(squareEquationRoots* roots) {
 
 // Reurn true if roots are equal, else rutern false
 bool AreRootsEqual(squareEquationRoots* firstRoots, squareEquationRoots* secondRoots) {
+    assert(firstRoots || secondRoots);
     if (firstRoots->rootCount == secondRoots->rootCount &&
                IsZero(firstRoots->x1 - secondRoots->x1) &&
                IsZero(firstRoots->x2 - secondRoots->x2)   )
