@@ -15,6 +15,13 @@
  */
 
 
+enum COLORS {
+    GREEN,
+    RED
+};
+typedef enum COLORS color_t;
+
+
 /** 
  * Set coefficients 
  * of square equation.
@@ -40,18 +47,7 @@ bool SetEquation(squareEquation* equation);
 void PrintRoots(squareEquationRoots* equation);
 
 
-/**
- * This function work like
- * printf(), but text is green.
- */
-int GreenPrintf(const char* format, ...);
-
-
-/**
- * This function work like
- * printf(), but text is green.
- */
-int RedPrintf(const char* format, ...);
+int ColoredPrintf(color_t color, const char* format, ...);
 
 
 #endif // SCANNER_H

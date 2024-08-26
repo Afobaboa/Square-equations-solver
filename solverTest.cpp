@@ -40,7 +40,7 @@ void RunSolverTesting() {
     for (int i = 0; i < testCount; i++) {
         squareEquationRoots recievedRoots = SolveEquation(&solverTest[i].equation);
         if (AreRootsEqual(&recievedRoots, &solverTest[i].expectedRoots)) {
-            GreenPrintf("Test %d completed.\n", i);
+            ColoredPrintf(GREEN, "Test %d completed.\n", i);
         } else {
             PrintWrongTest(i, recievedRoots);
             break;
@@ -51,7 +51,7 @@ void RunSolverTesting() {
 
 
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots) {
-    RedPrintf("Test %d failed!!!\n"
+    ColoredPrintf(RED, "Test %d failed!!!\n"
               "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
               "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
               testNumber,

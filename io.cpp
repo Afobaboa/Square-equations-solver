@@ -18,6 +18,7 @@ static bool IsEquationFinite(squareEquation* equation);
 static bool IsEOF();
 static void ClearInput();
 static void PrintWrongInputMessage();
+static void PrintColor(color_t color);
 
 
 // Clear all stdin
@@ -117,10 +118,10 @@ static bool IsEOF() {
 
 
 // printf() but text is GREEN
-int GreenPrintf(const char* format, ...) {
+int ColoredPrintf(color_t color, const char* format, ...) {
     va_list args;
     va_start(args, format);
-    printf(COLOR_GREEN);
+    PrintColor(color);
     int result = vprintf(format, args);
     printf(COLOR_RESET);
     va_end(args);
@@ -128,13 +129,17 @@ int GreenPrintf(const char* format, ...) {
 }
 
 
-// printf() but text is RED
-int RedPrintf(const char* format, ...) {
-    va_list args;
-    va_start(args, format);
-    printf(COLOR_RED);
-    int result = vprintf(format, args);
-    printf(COLOR_RESET);
-    va_end(args);
-    return result;
+// Change color of text to choosed color
+void PrintColor(color_t color) {
+    switch(color) {
+    case GREEN:
+        printf(COLOR_GREEN);
+        break;
+    case RED:
+        printf(COLOR_RED);
+        break;
+    default: 
+        fprintf(stderr, "io.cpp: PrintColor(): ERROR, wrong color.");
+        break;
+    }
 }
