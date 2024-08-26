@@ -1,5 +1,6 @@
-#include <string.h>
 #include <stdio.h>
+#include "../headers/io.h"
+#include "../headers/solver.h"
 #include "../headers/solverTest.h"
 #include "../headers/CmdLineArgsHandlers.h"
 
@@ -11,31 +12,6 @@
 
 
 /**
- * Check if options format is OK.
- * Now the rules say you can't 
- * use more than 1 option.
- * 
- * You can change format rules 
- * in future.
- * 
- * @return true if rules 
- */
-static bool AreOptionsCorrect(int argc, char* argv[]);
-
-
-/**
- * Return next option from stdin.
- * Yout shoult process this option 
- * before getting next option.
- * 
- * @return Real option if it exists,
- * @return WRONG_OPTION if it doesn't 
- * exist.
- */
-static option_t GetOption(const char* option);
-
-
-/**
  * Process all options from
  * enum OPTIONS.
  * 
@@ -44,6 +20,31 @@ static option_t GetOption(const char* option);
  * @return true in other situations.
  */
 static bool ProcessOption(option_t option);
+
+
+/** 
+ * Print all available 
+ * options and instructions
+ * for use.
+ */
+void PrintHelp();
+
+
+/**
+ * This functions breaks
+ * my program and I don't
+ * know how to delete if.
+ */
+void PrintDED();
+
+
+/**
+ * Help user to solve
+ * his square equations.
+ * 
+ * Shows interface in terminal.
+ */
+static void RunSolving();
 
 
 int main(int argc, char* argv[]) {
@@ -62,20 +63,6 @@ int main(int argc, char* argv[]) {
     }
 
     return 0;
-}
-
-
-static option_t GetOption(const char* option) {
-    if (!strcmp(option, "help"))
-        return HELP;
-    if (!strcmp(option, "r"))
-        return RUN;
-    if (!strcmp(option, "t"))
-        return TEST;
-    if (!strcmp(option, "ded"))
-        return DED;
-    else 
-        return WRONG_OPTION;
 }
 
 
@@ -101,9 +88,39 @@ static bool ProcessOption(option_t option) {
     }
 }
 
+static void RunSolving() {
+    puts("# Эта программа умеет решать квадратные уравнения "
+         "в вещественных числах! Попоробуй сам!\n"
+         "# Для выхода нажмите ctrl+D. ");
 
-static bool AreOptionsCorrect(int argc, char* argv[]) {
-    if (argc == 2 && argv[1][0] == '-') 
-        return true;
-    return false;
+    squareEquation equation = { .a = 0,
+                                .b = 0,
+                                .c = 0};
+
+    for(;;) {
+        if (!SetEquation(&equation)) 
+            break;
+        squareEquationRoots roots = SolveEquation(&equation);
+        PrintRoots(&roots);
+        puts("# Для выхода нажмите ctrl+D.");
+    }
+
+    puts("# Пока!");
+}
+
+
+void PrintHelp() {
+    puts("Вас приветствует программа Square Solver!\n"
+         "Для пользования программой введитe './squareSolver [ОПЦИЯ]'\n\n"
+         "Доступные опции:\n"
+         "-help выводит все доступные флаги.\n"
+         "-r запускает решение квадратных уравнений\n"
+         "-t запускает тестирование.");
+}
+
+
+void PrintDED() {
+    for (int i = 0; i < 32; i++)
+        printf("бу");
+    printf("\n");
 }

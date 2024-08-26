@@ -25,26 +25,28 @@ typedef enum OPTIONS option_t;
 
 
 /**
- * Help user to solve
- * his square equations.
+ * Return next option from stdin.
+ * Yout shoult process this option 
+ * before getting next option.
+ * 
+ * @return Real option if it exists,
+ * @return WRONG_OPTION if it doesn't 
+ * exist.
  */
-void RunSolving();
+option_t GetOption(const char* option);
 
 
 /**
- * This functions breaks
- * my program and I don't
- * know how to delete if.
+ * Check if options format is OK.
+ * Now the rules say you can't 
+ * use more than 1 option.
+ * 
+ * You can change format rules 
+ * in future.
+ * 
+ * @return true if rules 
  */
-void PrintDED();
-
-
-/** 
- * Print all available 
- * options and instructions
- * for use.
- */
-void PrintHelp();
+bool AreOptionsCorrect(int argc, char* argv[]);
 
 
 #endif // CMD_LINE_ARGS_HANDLERS_H
