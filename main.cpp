@@ -25,19 +25,19 @@ static bool     AreOptionsCorrect(int argc, char* argv[]);
 
 
 int main(int argc, char* argv[]) {
-    if (AreOptionsCorrect(argc, argv)) {
-        int counter = 1;
-        while ((argc - counter) > 0  && argv[counter][0] == '-') {
-            option_t option = GetOption(argv[counter] + 1);
-            if (!ProcessOption(option)) {
-                PrintHelp();
-                break;
-            }
-            counter++;
-        }
-    } else
+    if (!AreOptionsCorrect(argc, argv)) {
         PrintHelp();
-
+        return 0;
+    }
+    int counter = 1;
+    while ((argc - counter) > 0  && argv[counter][0] == '-') {
+        option_t option = GetOption(argv[counter] + 1);
+        if (!ProcessOption(option)) {
+            PrintHelp();
+            break;
+        }
+        counter++;
+    }
     return 0;
 }
 
@@ -50,7 +50,6 @@ static void PrintHelp() {
          "-help выводит все доступные флаги.\n"
          "-r запускает решение квадратных уравнений\n"
          "-t запускает тестирование.");
-    puts("\nДля решения квадратных уравнений запустите программу без опций.");
 }
 
 
@@ -65,10 +64,8 @@ static void RunSolving() {
                                 .c = 0};
 
     for(;;) {
-        if (!SetEquation(&equation)) {
-            puts("RunSolving(): ERROR, can't set equation.");
+        if (!SetEquation(&equation)) 
             break;
-        }
         squareEquationRoots roots = SolveEquation(&equation);
         PrintRoots(&roots);
         puts("# Для выхода нажмите ctrl+D.");
