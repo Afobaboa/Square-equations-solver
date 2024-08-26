@@ -1,10 +1,12 @@
+#include <string.h>
 #include <stdio.h>
-#include "../headers/io.h"
-#include "../headers/solver.h"
-#include "../headers/CmdLineArgsHandler.h"
+#include "../headers/solverTest.h"
+#include "../headers/CmdLineArgsHandlers.h"
 
 
-void RunSolving();
+static bool     AreOptionsCorrect(int argc, char* argv[]);
+static option_t GetOption(const char* option);
+static bool     ProcessOption(option_t option);
 
 
 int main(int argc, char* argv[]) {
@@ -26,23 +28,50 @@ int main(int argc, char* argv[]) {
 }
 
 
-// Run solving 
-void RunSolving() {
-    puts("# Эта программа умеет решать квадратные уравнения "
-         "в вещественных числах! Попоробуй сам!\n"
-         "# Для выхода нажмите ctrl+D. ");
+// Convert option from char* to option_t
+option_t GetOption(const char* option) {
+    if (!strcmp(option, "help"))
+        return HELP;
+    if (!strcmp(option, "r"))
+        return RUN;
+    if (!strcmp(option, "t"))
+        return TEST;
+    if (!strcmp(option, "ded"))
+        return DED;
+    else 
+        return WRONG_OPTION;
+}
 
-    squareEquation equation = { .a = 0,
-                                .b = 0,
-                                .c = 0};
 
-    for(;;) {
-        if (!SetEquation(&equation)) 
-            break;
-        squareEquationRoots roots = SolveEquation(&equation);
-        PrintRoots(&roots);
-        puts("# Для выхода нажмите ctrl+D.");
+// Process option
+// If option have to be only one,
+// false will be returned
+bool ProcessOption(option_t option) {
+    switch (option) {
+    case HELP:
+        PrintHelp();
+        return true;
+    case RUN:
+        RunSolving();
+        return true;
+    case TEST:
+        RunSolverTesting();
+        return true;
+    case DED:
+        PrintDED();
+        return true;
+    case WRONG_OPTION:
+        return false;
+    default:    
+        fprintf(stderr, "ProcessOneOption(): ERROR, option doesn't exist.\n");
+        return false;
     }
+}
 
-    puts("# Пока!");
+
+// Check if options correct
+static bool AreOptionsCorrect(int argc, char* argv[]) {
+    if (argc == 2 && argv[1][0] == '-') 
+        return true;
+    return false;
 }
