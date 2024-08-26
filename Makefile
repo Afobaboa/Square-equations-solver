@@ -32,8 +32,12 @@ EXECUTABLE=squareSolver
 all: $(OBJECTS) $(EXECUTABLE)
 
 
+test: $(EXECUTABLE)
+	./$< -t
+
+
 run: $(EXECUTABLE)
-	./$<
+	./$< -r
 
 
 $(EXECUTABLE): $(OBJECTS)

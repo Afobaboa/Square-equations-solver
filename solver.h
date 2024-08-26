@@ -36,7 +36,7 @@ squareEquationRoots SolveEquation(squareEquation* equation);
  * @return true if roots are equal.
  * @return false if roots are not equal.
  */
-bool IsRootsEqual(squareEquationRoots* firstRoots, squareEquationRoots* secondRoots);
+bool AreRootsEqual(squareEquationRoots* firstRoots, squareEquationRoots* secondRoots);
 
 
 #endif // SOLVER_H

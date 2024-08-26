@@ -8,49 +8,54 @@
 
 enum OPTIONS {
     HELP,
+    RUN,
     TEST,
+    DED,
     WRONG_OPTION
 };
 typedef enum OPTIONS option_t;
 
 
+static void     PrintDED();
 static void     RunSolving();
 static void     PrintHelp();
 static option_t GetOption(const char* option);
 static bool     ProcessOption(option_t option);
+static bool     AreOptionsCorrect(int argc, char* argv[]);
 
 
 int main(int argc, char* argv[]) {
-    int counter = 1;
-
-    if (argc == 1)
-        RunSolving();
-    else {
-        while ((argc - counter) > 0  && *(argv + counter)[0] == '-') {
-            option_t option = GetOption(++*(argv + counter));
-            if (!ProcessOption(option))
+    if (AreOptionsCorrect(argc, argv)) {
+        int counter = 1;
+        while ((argc - counter) > 0  && argv[counter][0] == '-') {
+            option_t option = GetOption(argv[counter] + 1);
+            if (!ProcessOption(option)) {
+                PrintHelp();
                 break;
+            }
             counter++;
         }
-    }
-    if (argc - counter != 0)
-        printf("Неправильная опция! Попробуйте \"%s -help\".\n", argv[0]);
+    } else
+        PrintHelp();
 
     return 0;
 }
 
 
 // Prints special message if there is -help
-void PrintHelp() {
-    puts("Доступные опции:\n"
-         "-help выводит окошко.\n"
+static void PrintHelp() {
+    puts("Вас приветствует программа Square Solver!\n"
+         "Для пользования программой введиту './squareSolver [ОПЦИЯ]'\n\n"
+         "Доступные опции:\n"
+         "-help выводит все доступные флаги.\n"
+         "-r запускает решение квадратных уравнений\n"
          "-t запускает тестирование.");
     puts("\nДля решения квадратных уравнений запустите программу без опций.");
 }
 
 
 // Run solving 
-void RunSolving() {
+static void RunSolving() {
     puts("# Эта программа умеет решать квадратные уравнения "
          "в вещественных числах! Попоробуй сам!\n"
          "# Для выхода нажмите ctrl+D. ");
@@ -60,8 +65,10 @@ void RunSolving() {
                                 .c = 0};
 
     for(;;) {
-        if (!SetEquation(&equation))
+        if (!SetEquation(&equation)) {
+            puts("RunSolving(): ERROR, can't set equation.");
             break;
+        }
         squareEquationRoots roots = SolveEquation(&equation);
         PrintRoots(&roots);
         puts("# Для выхода нажмите ctrl+D.");
@@ -72,24 +79,36 @@ void RunSolving() {
 
 
 // Convert option from char* to option_t
-option_t GetOption(const char* option) {
+static option_t GetOption(const char* option) {
     if (!strcmp(option, "help"))
         return HELP;
+    if (!strcmp(option, "r"))
+        return RUN;
     if (!strcmp(option, "t"))
         return TEST;
+    if (!strcmp(option, "ded"))
+        return DED;
     else 
         return WRONG_OPTION;
 }
 
 
 // Process option
-bool ProcessOption(option_t option) {
+// If option have to be only one,
+// false will be returned
+static bool ProcessOption(option_t option) {
     switch (option) {
     case HELP:
         PrintHelp();
         return true;
+    case RUN:
+        RunSolving();
+        return true;
     case TEST:
         RunSolverTesting();
+        return true;
+    case DED:
+        PrintDED();
         return true;
     case WRONG_OPTION:
         return false;
@@ -97,4 +116,19 @@ bool ProcessOption(option_t option) {
         fprintf(stderr, "main.cpp: ProcessOption(): ERROR, option doesn't exist.\n");
         return false;
     }
+}
+
+
+// Easter egg
+static void PrintDED() {
+    for (int i = 0; i < 32; i++)
+        printf("бу");
+    printf("\n");
+}
+
+
+static bool AreOptionsCorrect(int argc, char* argv[]) {
+    if (argc == 2 && argv[1][0] == '-') 
+        return true;
+    return false;
 }

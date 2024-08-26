@@ -14,7 +14,7 @@ static void PrintWrongInputMessage();
 
 
 // Clear all stdin
-void ClearInput() {
+static void ClearInput() {
     int c = getchar();
     while (c != '\n' && c != EOF) 
         c = getchar();
@@ -38,7 +38,7 @@ bool SetEquation(squareEquation* equation) {
 
 
 // Is there any input?
-bool IsInputClear() {
+static bool IsInputClear() {
     int c = 0;
     do {
         c = getchar();
@@ -73,7 +73,7 @@ void PrintRoots(squareEquationRoots* roots) {
 
 
 // Print this message if input is wrong
-void PrintWrongInputMessage() {
+static void PrintWrongInputMessage() {
     puts("# Неверный ввод. Попробуйте ввести все сначала.");
 }
 
@@ -92,7 +92,7 @@ bool IsEquationFinite(squareEquation* equation) {
 
 
 // Is double value finite?
-bool IsFinite(double value) {
+static bool IsFinite(double value) {
     if (!isfinite(value) || isinf(value)) {
         return false;
     }
@@ -101,7 +101,7 @@ bool IsFinite(double value) {
 
 
 // If EOF is next in stdin?
-bool IsEOF() {
+static bool IsEOF() {
     int c = getchar();
     if (c == EOF)
         return true;

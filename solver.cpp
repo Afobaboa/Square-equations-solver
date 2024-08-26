@@ -4,7 +4,7 @@
 
 
 static squareEquationRoots SolveLinearEquation(squareEquation* equation);
-squareEquationRoots        SolveSquareEquation(squareEquation* equation);
+static squareEquationRoots SolveSquareEquation(squareEquation* equation);
 static void                SetZeroRoots(squareEquationRoots* roots); 
 static double              GetDiscriminant(squareEquation equation);
 static bool                IsZero(double value);
@@ -12,7 +12,7 @@ static bool                IsZero(double value);
 
 
 // This const double is used to copmare double values with zero
-const double EPSILON = 1E-5;
+static const double EPSILON = 1E-5;
 
 
 // Solve ax^2 + bx + c = 0 equation, a can be zero
@@ -32,7 +32,7 @@ squareEquationRoots SolveEquation(squareEquation* equation) {
 
 
 // Solve ax^2 + bx + c = 0 equation, a CAN'T be zero
-squareEquationRoots SolveSquareEquation(squareEquation* equation) {
+static squareEquationRoots SolveSquareEquation(squareEquation* equation) {
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
                                   .x1 = 0,
                                   .x2 = 0};
@@ -54,7 +54,7 @@ squareEquationRoots SolveSquareEquation(squareEquation* equation) {
 
 
 // Solve bx + c = 0
-squareEquationRoots SolveLinearEquation(squareEquation* equation) {
+static squareEquationRoots SolveLinearEquation(squareEquation* equation) {
     squareEquationRoots roots = { .rootCount = NO_ROOTS,
                                   .x1 = 0,
                                   .x2 = 0};
@@ -73,7 +73,7 @@ squareEquationRoots SolveLinearEquation(squareEquation* equation) {
 
 
 // Is value a double 0?
-bool IsZero(double value) {
+static bool IsZero(double value) {
     if (fabs(value) <= EPSILON)
         return true;
     return false;
@@ -81,14 +81,14 @@ bool IsZero(double value) {
 
 
 // Get discriminant of square equation
-double GetDiscriminant(squareEquation equation) {
+static double GetDiscriminant(squareEquation equation) {
     return equation.b * equation.b  -  4 * equation.a * equation.c;
 }
 
 
 // If roots are less than EPSILON
 // they will be change to 0.0
-void SetZeroRoots(squareEquationRoots* roots) {
+static void SetZeroRoots(squareEquationRoots* roots) {
     if (IsZero(roots->x1)) 
         roots->x1 = 0;
     if (IsZero(roots->x2)) 
@@ -97,7 +97,7 @@ void SetZeroRoots(squareEquationRoots* roots) {
 
 
 // Reurn true if roots are equal, else rutern false
-bool IsRootsEqual(squareEquationRoots* firstRoots, squareEquationRoots* secondRoots) {
+bool AreRootsEqual(squareEquationRoots* firstRoots, squareEquationRoots* secondRoots) {
     if (firstRoots->rootCount == secondRoots->rootCount &&
                IsZero(firstRoots->x1 - secondRoots->x1) &&
                IsZero(firstRoots->x2 - secondRoots->x2)   )

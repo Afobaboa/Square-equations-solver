@@ -14,7 +14,7 @@ struct SolverTest {
 };
 
 
-SolverTest solverTest[] = {
+static SolverTest solverTest[] = {
 //  {{ a,          b,          c       },   {rootCount,             x1,         x2      }}
     {{ 1,          1,          1       },   {NO_ROOTS,              0,          0       }},  // 0
     {{ 0.000001,   0,          1       },   {NO_ROOTS,              0,          0       }},  // 1
@@ -38,7 +38,7 @@ void RunSolverTesting() {
     puts("Testing started.");
     for (int i = 0; i < testCount; i++) {
         squareEquationRoots recievedRoots = SolveEquation(&solverTest[i].equation);
-        if (IsRootsEqual(&recievedRoots, &solverTest[i].expectedRoots)) {
+        if (AreRootsEqual(&recievedRoots, &solverTest[i].expectedRoots)) {
             printf("Test %d completed.\n", i);
         } else {
             PrintWrongTest(i, recievedRoots);
@@ -49,7 +49,7 @@ void RunSolverTesting() {
 }
 
 
-void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots) {
+static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots) {
     printf("Test %d failed!!!\n"
            "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
            "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
