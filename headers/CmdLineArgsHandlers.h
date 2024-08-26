@@ -1,5 +1,5 @@
-#ifndef CMD_LINE_ARGS_HANDLER_H
-#define CMD_LINE_ARGS_HANDLER_H
+#ifndef CMD_LINE_ARGS_HANDLERS_H
+#define CMD_LINE_ARGS_HANDLERS_H
 
 
 enum OPTIONS {
@@ -18,4 +18,4 @@ void PrintDED();
 void PrintHelp();
 
 
-#endif // CMD_LINE_ARGS_HANDLER_H
+#endif // CMD_LINE_ARGS_HANDLERS_H
