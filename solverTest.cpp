@@ -1,12 +1,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "solver.h"
+#include "io.h"
 #include "solverTest.h"
-
-
-#define COLOR_RED   "\x1b[31m"
-#define COLOR_GREEN "\x1b[32m"
-#define COLOR_RESET "\x1b[0m"
 
 
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots);
@@ -44,7 +40,7 @@ void RunSolverTesting() {
     for (int i = 0; i < testCount; i++) {
         squareEquationRoots recievedRoots = SolveEquation(&solverTest[i].equation);
         if (AreRootsEqual(&recievedRoots, &solverTest[i].expectedRoots)) {
-            printf(COLOR_GREEN "Test %d completed.\n" COLOR_RESET, i);
+            GreenPrintf("Test %d completed.\n", i);
         } else {
             PrintWrongTest(i, recievedRoots);
             break;
@@ -55,11 +51,11 @@ void RunSolverTesting() {
 
 
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots) {
-    printf(COLOR_RED "Test %d failed!!!\n" COLOR_RESET
-           "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
-           "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
-           testNumber,
-           solverTest[testNumber].expectedRoots.x1, solverTest[testNumber].expectedRoots.x2, 
-                                                    solverTest[testNumber].expectedRoots.rootCount,
-           recievedRoots.x1, recievedRoots.x2, recievedRoots.rootCount);
+    RedPrintf("Test %d failed!!!\n"
+              "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
+              "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
+              testNumber,
+              solverTest[testNumber].expectedRoots.x1, solverTest[testNumber].expectedRoots.x2, 
+                                                       solverTest[testNumber].expectedRoots.rootCount,
+              recievedRoots.x1, recievedRoots.x2, recievedRoots.rootCount);
 }

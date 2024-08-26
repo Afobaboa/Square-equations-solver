@@ -40,4 +40,18 @@ bool SetEquation(squareEquation* equation);
 void PrintRoots(squareEquationRoots* equation);
 
 
+/**
+ * This function work like
+ * printf(), but text is green.
+ */
+int GreenPrintf(const char* format, ...);
+
+
+/**
+ * This function work like
+ * printf(), but text is green.
+ */
+int RedPrintf(const char* format, ...);
+
+
 #endif // SCANNER_H

@@ -1,8 +1,15 @@
 #include <math.h>
+#include <stdarg.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 #include "io.h"
+
+
+#define COLOR_RED   "\x1b[31m"
+#define COLOR_GREEN "\x1b[32m"
+#define COLOR_RESET "\x1b[0m"
 
 
 static bool IsInputClear();
@@ -106,4 +113,28 @@ static bool IsEOF() {
     if (c == EOF)
         return true;
     return false;
+}
+
+
+// printf() but text is GREEN
+int GreenPrintf(const char* format, ...) {
+    va_list args;
+    va_start(args, format);
+    printf(COLOR_GREEN);
+    int result = vprintf(format, args);
+    printf(COLOR_RESET);
+    va_end(args);
+    return result;
+}
+
+
+// printf() but text is RED
+int RedPrintf(const char* format, ...) {
+    va_list args;
+    va_start(args, format);
+    printf(COLOR_RED);
+    int result = vprintf(format, args);
+    printf(COLOR_RESET);
+    va_end(args);
+    return result;
 }
