@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['printded_16',['PrintDED',['../CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a',1,'PrintDED():&#160;CmdLineArgsHandler.cpp'],['../CmdLineArgsHandler_8cpp.html#af71f252765d95151a3fbc15c6ada098a',1,'PrintDED():&#160;CmdLineArgsHandler.cpp']]],
-  ['printhelp_17',['PrintHelp',['../CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef',1,'PrintHelp():&#160;CmdLineArgsHandler.cpp'],['../CmdLineArgsHandler_8cpp.html#ae964ff8411b4fdcaf65cb5529aea4bef',1,'PrintHelp():&#160;CmdLineArgsHandler.cpp']]],
-  ['printroots_18',['PrintRoots',['../io_8h.html#a7eefd2afed42a9004ed3bb3f063c18cd',1,'PrintRoots(squareEquationRoots *equation):&#160;io.cpp'],['../io_8cpp.html#aa39e27639824b9b8f7d5d846535623df',1,'PrintRoots(squareEquationRoots *roots):&#160;io.cpp']]]
+  ['no_5froots_33',['NO_ROOTS',['../squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c',1,'squareEquation.h']]]
 ];

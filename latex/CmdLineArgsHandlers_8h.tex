@@ -5,8 +5,7 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}\label{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}} 
-typedef enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{OPTIONS}} {\bfseries option\+\_\+t}
+typedef enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{OPTIONS}} \mbox{\hyperlink{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}{option\+\_\+t}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -23,16 +22,23 @@ enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{CmdLineArgsHandlers_8h_ac50e691af23568669d7862d675e94b0a}{Run\+Solving}} ()
+\mbox{\hyperlink{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}{option\+\_\+t}} \mbox{\hyperlink{CmdLineArgsHandlers_8h_a3243009282dc31db36c88a6e3e31db68}{Get\+Option}} (const char $\ast$option)
 \item 
-void \mbox{\hyperlink{CmdLineArgsHandlers_8h_af71f252765d95151a3fbc15c6ada098a}{Print\+DED}} ()
-\item 
-void \mbox{\hyperlink{CmdLineArgsHandlers_8h_ae964ff8411b4fdcaf65cb5529aea4bef}{Print\+Help}} ()
+bool \mbox{\hyperlink{CmdLineArgsHandlers_8h_ad228083775d44b374659d6d8421f3b2b}{Are\+Options\+Correct}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This header used to process cmd line arguments of this program. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}\label{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!option\_t@{option\_t}}
+\index{option\_t@{option\_t}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{option\_t}{option\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{OPTIONS}} \mbox{\hyperlink{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}{option\+\_\+t}}}
+
+
 
 \doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}} 
@@ -66,22 +72,29 @@ WRONG\+\_\+\+OPTION&This option is for error handling. \\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{CmdLineArgsHandlers_8h_af71f252765d95151a3fbc15c6ada098a}\label{CmdLineArgsHandlers_8h_af71f252765d95151a3fbc15c6ada098a}} 
-\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!PrintDED@{PrintDED}}
-\index{PrintDED@{PrintDED}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
-\doxysubsubsection{\texorpdfstring{PrintDED()}{PrintDED()}}
-{\footnotesize\ttfamily void Print\+DED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{CmdLineArgsHandlers_8h_ad228083775d44b374659d6d8421f3b2b}\label{CmdLineArgsHandlers_8h_ad228083775d44b374659d6d8421f3b2b}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!AreOptionsCorrect@{AreOptionsCorrect}}
+\index{AreOptionsCorrect@{AreOptionsCorrect}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{AreOptionsCorrect()}{AreOptionsCorrect()}}
+{\footnotesize\ttfamily bool Are\+Options\+Correct (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-This functions breaks my program and I don\textquotesingle{}t know how to delete if. \mbox{\Hypertarget{CmdLineArgsHandlers_8h_ae964ff8411b4fdcaf65cb5529aea4bef}\label{CmdLineArgsHandlers_8h_ae964ff8411b4fdcaf65cb5529aea4bef}} 
-\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!PrintHelp@{PrintHelp}}
-\index{PrintHelp@{PrintHelp}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
-\doxysubsubsection{\texorpdfstring{PrintHelp()}{PrintHelp()}}
-{\footnotesize\ttfamily void Print\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Check if options format is OK. Now the rules say you can\textquotesingle{}t use more than 1 option.
 
-Print all available options and instructions for use. \mbox{\Hypertarget{CmdLineArgsHandlers_8h_ac50e691af23568669d7862d675e94b0a}\label{CmdLineArgsHandlers_8h_ac50e691af23568669d7862d675e94b0a}} 
-\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!RunSolving@{RunSolving}}
-\index{RunSolving@{RunSolving}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
-\doxysubsubsection{\texorpdfstring{RunSolving()}{RunSolving()}}
-{\footnotesize\ttfamily void Run\+Solving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+You can change format rules in future.
 
-Help user to solve his square equations. 
+\begin{DoxyReturn}{Returns}
+true if rules 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a3243009282dc31db36c88a6e3e31db68}\label{CmdLineArgsHandlers_8h_a3243009282dc31db36c88a6e3e31db68}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!GetOption@{GetOption}}
+\index{GetOption@{GetOption}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{GetOption()}{GetOption()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}{option\+\_\+t}} Get\+Option (\begin{DoxyParamCaption}\item[{const char $\ast$}]{option }\end{DoxyParamCaption})}
+
+Return next option from stdin. Yout shoult process this option before getting next option.
+
+\begin{DoxyReturn}{Returns}
+Real option if it exists, 
+
+WRONG\+\_\+\+OPTION if it doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}

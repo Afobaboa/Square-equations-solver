@@ -68,7 +68,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">solver.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -85,10 +86,25 @@ Include dependency graph for solver.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a54b9791c020c6f31cbe8c069ed9dabe0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a54b9791c020c6f31cbe8c069ed9dabe0">SolveLinearEquation</a> (<a class="el" href="structsquareEquation.html">squareEquation</a> *equation)</td></tr>
+<tr class="separator:a54b9791c020c6f31cbe8c069ed9dabe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ba7affe820983a2c6cbba10971dd96"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#ae6ba7affe820983a2c6cbba10971dd96">SolveSquareEquation</a> (<a class="el" href="structsquareEquation.html">squareEquation</a> *equation)</td></tr>
+<tr class="separator:ae6ba7affe820983a2c6cbba10971dd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddc94e4fdba7df9643afbdfdfae81dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a6ddc94e4fdba7df9643afbdfdfae81dd">SetZeroRoots</a> (<a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *roots)</td></tr>
+<tr class="separator:a6ddc94e4fdba7df9643afbdfdfae81dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91421176cff5ec729c45eda4c6bff9df"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a91421176cff5ec729c45eda4c6bff9df">GetDiscriminant</a> (<a class="el" href="structsquareEquation.html">squareEquation</a> equation)</td></tr>
+<tr class="separator:a91421176cff5ec729c45eda4c6bff9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3ece598bdc71d47f0537b33c2d3b65"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a5f3ece598bdc71d47f0537b33c2d3b65">IsZero</a> (double value)</td></tr>
+<tr class="separator:a5f3ece598bdc71d47f0537b33c2d3b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad95369f7091b5a158d4d4a67fe5dc44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#aad95369f7091b5a158d4d4a67fe5dc44">SolveEquation</a> (<a class="el" href="structsquareEquation.html">squareEquation</a> *equation)</td></tr>
 <tr class="separator:aad95369f7091b5a158d4d4a67fe5dc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1675807a6fd8b91b75c2967bb3700239"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a1675807a6fd8b91b75c2967bb3700239">AreRootsEqual</a> (<a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *firstRoots, <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *secondRoots)</td></tr>
 <tr class="separator:a1675807a6fd8b91b75c2967bb3700239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a596344e5a2992d2beec43b76a6294de0"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a596344e5a2992d2beec43b76a6294de0">EPSILON</a> = 1E-5</td></tr>
+<tr class="separator:a596344e5a2992d2beec43b76a6294de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This program used to solve ready equation. </p>
@@ -125,6 +141,87 @@ false if roots are not equal. </dd></dl>
 
 </div>
 </div>
+<a id="a91421176cff5ec729c45eda4c6bff9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91421176cff5ec729c45eda4c6bff9df">&#9670;&nbsp;</a></span>GetDiscriminant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double GetDiscriminant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsquareEquation.html">squareEquation</a>&#160;</td>
+          <td class="paramname"><em>equation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Discriminant of square equation. First coefficient (a) have to be not zero. </dd></dl>
+
+</div>
+</div>
+<a id="a5f3ece598bdc71d47f0537b33c2d3b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3ece598bdc71d47f0537b33c2d3b65">&#9670;&nbsp;</a></span>IsZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool IsZero </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if value is double zero. EPSILON is used for compare. </p>
+
+</div>
+</div>
+<a id="a6ddc94e4fdba7df9643afbdfdfae81dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ddc94e4fdba7df9643afbdfdfae81dd">&#9670;&nbsp;</a></span>SetZeroRoots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SetZeroRoots </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> *&#160;</td>
+          <td class="paramname"><em>roots</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If there are roots like 0.0000001, this function set they to 0. </p>
+
+</div>
+</div>
 <a id="aad95369f7091b5a158d4d4a67fe5dc44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad95369f7091b5a158d4d4a67fe5dc44">&#9670;&nbsp;</a></span>SolveEquation()</h2>
 
@@ -152,6 +249,86 @@ false if roots are not equal. </dd></dl>
 If there are two roots, x1 will be less than x2. </dd>
 <dd>
 If there are not two roots, they will be equal to zero. </dd></dl>
+
+</div>
+</div>
+<a id="a54b9791c020c6f31cbe8c069ed9dabe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b9791c020c6f31cbe8c069ed9dabe0">&#9670;&nbsp;</a></span>SolveLinearEquation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> SolveLinearEquation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsquareEquation.html">squareEquation</a> *&#160;</td>
+          <td class="paramname"><em>equation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This function solve linear equation. FIRST COEFFICIEN (a) MUST BE ZERO, else there will be wrong roots.</p>
+<dl class="section return"><dt>Returns</dt><dd>roots of this equation. </dd></dl>
+
+</div>
+</div>
+<a id="ae6ba7affe820983a2c6cbba10971dd96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ba7affe820983a2c6cbba10971dd96">&#9670;&nbsp;</a></span>SolveSquareEquation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsquareEquationRoots.html">squareEquationRoots</a> SolveSquareEquation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsquareEquation.html">squareEquation</a> *&#160;</td>
+          <td class="paramname"><em>equation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This function solve square equations, wheer first coefficient HAVE TO BE NOT ZERO.</p>
+<dl class="section return"><dt>Returns</dt><dd>Roots of this equation. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a596344e5a2992d2beec43b76a6294de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596344e5a2992d2beec43b76a6294de0">&#9670;&nbsp;</a></span>EPSILON</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double EPSILON = 1E-5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This const double is used to copmare double values with zero </p>
 
 </div>
 </div>

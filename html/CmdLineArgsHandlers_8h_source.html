@@ -71,7 +71,7 @@ $(function() {
 <div class="title">CmdLineArgsHandlers.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="CmdLineArgsHandlers_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CMD_LINE_ARGS_HANDLERS_H</span></div>
+<a href="CmdLineArgsHandlers_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">    1</a></span>&#160;<span class="preprocessor">#ifndef CMD_LINE_ARGS_HANDLERS_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CMD_LINE_ARGS_HANDLERS_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
@@ -82,28 +82,25 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3">   21</a></span>&#160;    <a class="code" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3">DED</a>,            </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf">WRONG_OPTION</a>    </div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf">   23</a></span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c">OPTIONS</a> option_t;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c">OPTIONS</a> <a class="code" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CmdLineArgsHandlers_8h.html#ac50e691af23568669d7862d675e94b0a">RunSolving</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a">PrintDED</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef">PrintHelp</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CMD_LINE_ARGS_HANDLERS_H</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a> <a class="code" href="CmdLineArgsHandlers_8h.html#a3243009282dc31db36c88a6e3e31db68">GetOption</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* option);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="CmdLineArgsHandlers_8h.html#ad228083775d44b374659d6d8421f3b2b">AreOptionsCorrect</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CMD_LINE_ARGS_HANDLERS_H</span></div>
+<div class="ttc" id="aCmdLineArgsHandlers_8h_html_a3243009282dc31db36c88a6e3e31db68"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a3243009282dc31db36c88a6e3e31db68">GetOption</a></div><div class="ttdeci">option_t GetOption(const char *option)</div><div class="ttdef"><b>Definition:</b> CmdLineArgsGetter.cpp:12</div></div>
 <div class="ttc" id="aCmdLineArgsHandlers_8h_html_a4d39c1cfd27cf8736005f0eeec214c9c"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c">OPTIONS</a></div><div class="ttdeci">OPTIONS</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:17</div></div>
 <div class="ttc" id="aCmdLineArgsHandlers_8h_html_a4d39c1cfd27cf8736005f0eeec214c9ca439c688a4e9ed31638d5922a50680a8e"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca439c688a4e9ed31638d5922a50680a8e">RUN</a></div><div class="ttdeci">@ RUN</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:19</div></div>
 <div class="ttc" id="aCmdLineArgsHandlers_8h_html_a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf">WRONG_OPTION</a></div><div class="ttdeci">@ WRONG_OPTION</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:22</div></div>
 <div class="ttc" id="aCmdLineArgsHandlers_8h_html_a4d39c1cfd27cf8736005f0eeec214c9ca9f5cb747b2e1f0ea781d2b1f2a5b4824"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca9f5cb747b2e1f0ea781d2b1f2a5b4824">HELP</a></div><div class="ttdeci">@ HELP</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:18</div></div>
 <div class="ttc" id="aCmdLineArgsHandlers_8h_html_a4d39c1cfd27cf8736005f0eeec214c9cab2f0cd22b1963becef8b91d29d567fe8"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9cab2f0cd22b1963becef8b91d29d567fe8">TEST</a></div><div class="ttdeci">@ TEST</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:20</div></div>
 <div class="ttc" id="aCmdLineArgsHandlers_8h_html_a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3">DED</a></div><div class="ttdeci">@ DED</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:21</div></div>
-<div class="ttc" id="aCmdLineArgsHandlers_8h_html_ac50e691af23568669d7862d675e94b0a"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#ac50e691af23568669d7862d675e94b0a">RunSolving</a></div><div class="ttdeci">void RunSolving()</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandler.cpp:32</div></div>
-<div class="ttc" id="aCmdLineArgsHandlers_8h_html_ae964ff8411b4fdcaf65cb5529aea4bef"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef">PrintHelp</a></div><div class="ttdeci">void PrintHelp()</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandler.cpp:15</div></div>
-<div class="ttc" id="aCmdLineArgsHandlers_8h_html_af71f252765d95151a3fbc15c6ada098a"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a">PrintDED</a></div><div class="ttdeci">void PrintDED()</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandler.cpp:25</div></div>
+<div class="ttc" id="aCmdLineArgsHandlers_8h_html_a9c88bd4dd654dcfe1dc88d9e3d5e997d"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a></div><div class="ttdeci">enum OPTIONS option_t</div><div class="ttdef"><b>Definition:</b> CmdLineArgsHandlers.h:24</div></div>
+<div class="ttc" id="aCmdLineArgsHandlers_8h_html_ad228083775d44b374659d6d8421f3b2b"><div class="ttname"><a href="CmdLineArgsHandlers_8h.html#ad228083775d44b374659d6d8421f3b2b">AreOptionsCorrect</a></div><div class="ttdeci">bool AreOptionsCorrect(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> CmdLineArgsGetter.cpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

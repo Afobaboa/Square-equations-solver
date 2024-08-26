@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['printded_53',['PrintDED',['../CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a',1,'PrintDED():&#160;CmdLineArgsHandler.cpp'],['../CmdLineArgsHandler_8cpp.html#af71f252765d95151a3fbc15c6ada098a',1,'PrintDED():&#160;CmdLineArgsHandler.cpp']]],
-  ['printhelp_54',['PrintHelp',['../CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef',1,'PrintHelp():&#160;CmdLineArgsHandler.cpp'],['../CmdLineArgsHandler_8cpp.html#ae964ff8411b4fdcaf65cb5529aea4bef',1,'PrintHelp():&#160;CmdLineArgsHandler.cpp']]],
-  ['printroots_55',['PrintRoots',['../io_8h.html#a7eefd2afed42a9004ed3bb3f063c18cd',1,'PrintRoots(squareEquationRoots *equation):&#160;io.cpp'],['../io_8cpp.html#aa39e27639824b9b8f7d5d846535623df',1,'PrintRoots(squareEquationRoots *roots):&#160;io.cpp']]]
+  ['getdiscriminant_90',['GetDiscriminant',['../solver_8cpp.html#a91421176cff5ec729c45eda4c6bff9df',1,'solver.cpp']]],
+  ['getoption_91',['GetOption',['../CmdLineArgsHandlers_8h.html#a3243009282dc31db36c88a6e3e31db68',1,'GetOption(const char *option):&#160;CmdLineArgsGetter.cpp'],['../CmdLineArgsGetter_8cpp.html#a3243009282dc31db36c88a6e3e31db68',1,'GetOption(const char *option):&#160;CmdLineArgsGetter.cpp']]]
 ];

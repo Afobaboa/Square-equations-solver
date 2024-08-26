@@ -15,13 +15,16 @@ struct \mbox{\hyperlink{structSolverTest}{Solver\+Test}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static void \mbox{\hyperlink{solverTest_8cpp_ade6c5da92966089f846d9cd341785415}{Print\+Wrong\+Test}} (int test\+Number, \mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} recieved\+Roots)
+\item 
 void \mbox{\hyperlink{solverTest_8cpp_a7a43d205b2e19589a185a5b04cd359ab}{Run\+Solver\+Testing}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{solverTest_8cpp_aabab9c8c2bf74533603a0047c44bac49}\label{solverTest_8cpp_aabab9c8c2bf74533603a0047c44bac49}} 
-const int {\bfseries test\+Count} = sizeof(solver\+Test) / sizeof(\mbox{\hyperlink{structSolverTest}{Solver\+Test}})
+static \mbox{\hyperlink{structSolverTest}{Solver\+Test}} \mbox{\hyperlink{solverTest_8cpp_a251002a7a51f614ead4095318a7e04de}{solver\+Test}} \mbox{[}$\,$\mbox{]}
+\item 
+const int \mbox{\hyperlink{solverTest_8cpp_aabab9c8c2bf74533603a0047c44bac49}{test\+Count}} = sizeof(\mbox{\hyperlink{solverTest_8cpp_a251002a7a51f614ead4095318a7e04de}{solver\+Test}}) / sizeof(\mbox{\hyperlink{structSolverTest}{Solver\+Test}})
 \end{DoxyCompactItemize}
 
 
@@ -29,10 +32,48 @@ const int {\bfseries test\+Count} = sizeof(solver\+Test) / sizeof(\mbox{\hyperli
 This program is used for testing soler.\+cpp. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{solverTest_8cpp_a7a43d205b2e19589a185a5b04cd359ab}\label{solverTest_8cpp_a7a43d205b2e19589a185a5b04cd359ab}} 
+\mbox{\Hypertarget{solverTest_8cpp_ade6c5da92966089f846d9cd341785415}\label{solverTest_8cpp_ade6c5da92966089f846d9cd341785415}} 
+\index{solverTest.cpp@{solverTest.cpp}!PrintWrongTest@{PrintWrongTest}}
+\index{PrintWrongTest@{PrintWrongTest}!solverTest.cpp@{solverTest.cpp}}
+\doxysubsubsection{\texorpdfstring{PrintWrongTest()}{PrintWrongTest()}}
+{\footnotesize\ttfamily static void Print\+Wrong\+Test (\begin{DoxyParamCaption}\item[{int}]{test\+Number,  }\item[{\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}}}]{recieved\+Roots }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This function print all information about wrong test to terminal. \mbox{\Hypertarget{solverTest_8cpp_a7a43d205b2e19589a185a5b04cd359ab}\label{solverTest_8cpp_a7a43d205b2e19589a185a5b04cd359ab}} 
 \index{solverTest.cpp@{solverTest.cpp}!RunSolverTesting@{RunSolverTesting}}
 \index{RunSolverTesting@{RunSolverTesting}!solverTest.cpp@{solverTest.cpp}}
 \doxysubsubsection{\texorpdfstring{RunSolverTesting()}{RunSolverTesting()}}
 {\footnotesize\ttfamily void Run\+Solver\+Testing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 This function used to run testing of \mbox{\hyperlink{solver_8cpp}{solver.\+cpp}}. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{solverTest_8cpp_a251002a7a51f614ead4095318a7e04de}\label{solverTest_8cpp_a251002a7a51f614ead4095318a7e04de}} 
+\index{solverTest.cpp@{solverTest.cpp}!solverTest@{solverTest}}
+\index{solverTest@{solverTest}!solverTest.cpp@{solverTest.cpp}}
+\doxysubsubsection{\texorpdfstring{solverTest}{solverTest}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSolverTest}{Solver\+Test}} solver\+Test\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \{\{ 1,          1,          1       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}{NO\_ROOTS}},              0,          0       \}\},  }
+\DoxyCodeLine{    \{\{ 0.000001,   0,          1       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}{NO\_ROOTS}},              0,          0       \}\},  }
+\DoxyCodeLine{    \{\{ 0,          0,          0       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a658620cb6cbfb738eee32e3374b00e8a}{INFINITE\_ROOT\_COUNT}},   0,          0       \}\},  }
+\DoxyCodeLine{    \{\{ 0.000001,   5,          0.000001\},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf}{ONE\_ROOT}},              0,          0       \}\},  }
+\DoxyCodeLine{    \{\{ 1,         -\/2,          1       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf}{ONE\_ROOT}},              1,          0       \}\},  }
+\DoxyCodeLine{    \{\{ 5,          0,          0       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a6700c0f6efd23571cb22aefd2510b1cf}{ONE\_ROOT}},              0,          0       \}\},  }
+\DoxyCodeLine{    \{\{-\/1.3,        3.434532,  -\/3       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05ab9a321da349ac1355b717745736ad90c}{NO\_ROOTS}},              0,          0       \}\},  }
+\DoxyCodeLine{    \{\{ 2,          6,          3       \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}{TWO\_ROOTS}},            -\/2.366025,  -\/0.633975\}\},  }
+\DoxyCodeLine{    \{\{-\/1.234,      323,        323.23  \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}{TWO\_ROOTS}},             262.74732, -\/0.996915\}\},  }
+\DoxyCodeLine{    \{\{ 23443,      2345,      -\/42873   \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}{TWO\_ROOTS}},            -\/1.403278,   1.303248\}\},  }
+\DoxyCodeLine{    \{\{ 1,          1,          -\/12     \},   \{\mbox{\hyperlink{squareEquation_8h_a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81}{TWO\_ROOTS}},             -\/4,         3       \}\},  }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+There are tests for \mbox{\hyperlink{solver_8cpp}{solver.\+cpp}} \mbox{\Hypertarget{solverTest_8cpp_aabab9c8c2bf74533603a0047c44bac49}\label{solverTest_8cpp_aabab9c8c2bf74533603a0047c44bac49}} 
+\index{solverTest.cpp@{solverTest.cpp}!testCount@{testCount}}
+\index{testCount@{testCount}!solverTest.cpp@{solverTest.cpp}}
+\doxysubsubsection{\texorpdfstring{testCount}{testCount}}
+{\footnotesize\ttfamily const int test\+Count = sizeof(\mbox{\hyperlink{solverTest_8cpp_a251002a7a51f614ead4095318a7e04de}{solver\+Test}}) / sizeof(\mbox{\hyperlink{structSolverTest}{Solver\+Test}})}
+

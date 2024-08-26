@@ -85,8 +85,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9c88bd4dd654dcfe1dc88d9e3d5e997d"><td class="memItemLeft" align="right" valign="top"><a id="a9c88bd4dd654dcfe1dc88d9e3d5e997d"></a>
-typedef enum <a class="el" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c">OPTIONS</a>&#160;</td><td class="memItemRight" valign="bottom"><b>option_t</b></td></tr>
+<tr class="memitem:a9c88bd4dd654dcfe1dc88d9e3d5e997d"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c">OPTIONS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a></td></tr>
 <tr class="separator:a9c88bd4dd654dcfe1dc88d9e3d5e997d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -104,16 +103,29 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac50e691af23568669d7862d675e94b0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CmdLineArgsHandlers_8h.html#ac50e691af23568669d7862d675e94b0a">RunSolving</a> ()</td></tr>
-<tr class="separator:ac50e691af23568669d7862d675e94b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af71f252765d95151a3fbc15c6ada098a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CmdLineArgsHandlers_8h.html#af71f252765d95151a3fbc15c6ada098a">PrintDED</a> ()</td></tr>
-<tr class="separator:af71f252765d95151a3fbc15c6ada098a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae964ff8411b4fdcaf65cb5529aea4bef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CmdLineArgsHandlers_8h.html#ae964ff8411b4fdcaf65cb5529aea4bef">PrintHelp</a> ()</td></tr>
-<tr class="separator:ae964ff8411b4fdcaf65cb5529aea4bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3243009282dc31db36c88a6e3e31db68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CmdLineArgsHandlers_8h.html#a3243009282dc31db36c88a6e3e31db68">GetOption</a> (const char *option)</td></tr>
+<tr class="separator:a3243009282dc31db36c88a6e3e31db68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad228083775d44b374659d6d8421f3b2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CmdLineArgsHandlers_8h.html#ad228083775d44b374659d6d8421f3b2b">AreOptionsCorrect</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:ad228083775d44b374659d6d8421f3b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This header used to process cmd line arguments of this program. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a9c88bd4dd654dcfe1dc88d9e3d5e997d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c88bd4dd654dcfe1dc88d9e3d5e997d">&#9670;&nbsp;</a></span>option_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9c">OPTIONS</a> <a class="el" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a4d39c1cfd27cf8736005f0eeec214c9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d39c1cfd27cf8736005f0eeec214c9c">&#9670;&nbsp;</a></span>OPTIONS</h2>
 
@@ -142,57 +154,56 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af71f252765d95151a3fbc15c6ada098a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af71f252765d95151a3fbc15c6ada098a">&#9670;&nbsp;</a></span>PrintDED()</h2>
+<a id="ad228083775d44b374659d6d8421f3b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad228083775d44b374659d6d8421f3b2b">&#9670;&nbsp;</a></span>AreOptionsCorrect()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PrintDED </td>
+          <td class="memname">bool AreOptionsCorrect </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This functions breaks my program and I don't know how to delete if. </p>
+<p>Check if options format is OK. Now the rules say you can't use more than 1 option.</p>
+<p>You can change format rules in future.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if rules </dd></dl>
 
 </div>
 </div>
-<a id="ae964ff8411b4fdcaf65cb5529aea4bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae964ff8411b4fdcaf65cb5529aea4bef">&#9670;&nbsp;</a></span>PrintHelp()</h2>
+<a id="a3243009282dc31db36c88a6e3e31db68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3243009282dc31db36c88a6e3e31db68">&#9670;&nbsp;</a></span>GetOption()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PrintHelp </td>
+          <td class="memname"><a class="el" href="CmdLineArgsHandlers_8h.html#a9c88bd4dd654dcfe1dc88d9e3d5e997d">option_t</a> GetOption </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>option</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Print all available options and instructions for use. </p>
-
-</div>
-</div>
-<a id="ac50e691af23568669d7862d675e94b0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac50e691af23568669d7862d675e94b0a">&#9670;&nbsp;</a></span>RunSolving()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RunSolving </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Help user to solve his square equations. </p>
+<p>Return next option from stdin. Yout shoult process this option before getting next option.</p>
+<dl class="section return"><dt>Returns</dt><dd>Real option if it exists, </dd>
+<dd>
+WRONG_OPTION if it doesn't exist. </dd></dl>
 
 </div>
 </div>

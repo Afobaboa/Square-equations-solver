@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['runsolvertesting_56',['RunSolverTesting',['../solverTest_8h.html#a7a43d205b2e19589a185a5b04cd359ab',1,'RunSolverTesting():&#160;solverTest.cpp'],['../solverTest_8cpp.html#a7a43d205b2e19589a185a5b04cd359ab',1,'RunSolverTesting():&#160;solverTest.cpp']]],
-  ['runsolving_57',['RunSolving',['../CmdLineArgsHandlers_8h.html#ac50e691af23568669d7862d675e94b0a',1,'RunSolving():&#160;CmdLineArgsHandler.cpp'],['../CmdLineArgsHandler_8cpp.html#ac50e691af23568669d7862d675e94b0a',1,'RunSolving():&#160;CmdLineArgsHandler.cpp']]]
+  ['iseof_92',['IsEOF',['../io_8cpp.html#a325671f7ed59369940dd880400328cdb',1,'io.cpp']]],
+  ['isequationfinite_93',['IsEquationFinite',['../io_8cpp.html#ae50358e85649c9f475290b8066f5eacb',1,'io.cpp']]],
+  ['isfinite_94',['IsFinite',['../io_8cpp.html#a266d4983238cb059af9bbaddf8f9f9c6',1,'io.cpp']]],
+  ['isinputclear_95',['IsInputClear',['../io_8cpp.html#a4e5ccded1e381ad1d29c8a77b939f1b5',1,'io.cpp']]],
+  ['iszero_96',['IsZero',['../solver_8cpp.html#a5f3ece598bdc71d47f0537b33c2d3b65',1,'solver.cpp']]]
 ];

@@ -8,8 +8,7 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}\label{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}} 
-typedef enum \mbox{\hyperlink{io_8h_ab983350d6d1201c0ebd709320e7a0d50}{COLORS}} {\bfseries color\+\_\+t}
+typedef enum \mbox{\hyperlink{io_8h_ab983350d6d1201c0ebd709320e7a0d50}{COLORS}} \mbox{\hyperlink{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}{color\+\_\+t}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -25,7 +24,7 @@ bool \mbox{\hyperlink{io_8h_a0690c5f090d64b8886487ad9fd216368}{Set\+Equation}} (
 \item 
 void \mbox{\hyperlink{io_8h_a7eefd2afed42a9004ed3bb3f063c18cd}{Print\+Roots}} (\mbox{\hyperlink{structsquareEquationRoots}{square\+Equation\+Roots}} $\ast$equation)
 \item 
-int \mbox{\hyperlink{io_8h_a2a588c77a0776873eb223f57db0bb1d5}{Colored\+Printf}} (color\+\_\+t color, const char $\ast$format,...)
+int \mbox{\hyperlink{io_8h_a2a588c77a0776873eb223f57db0bb1d5}{Colored\+Printf}} (\mbox{\hyperlink{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}{color\+\_\+t}} color, const char $\ast$format,...)
 \end{DoxyCompactItemize}
 
 
@@ -33,6 +32,15 @@ int \mbox{\hyperlink{io_8h_a2a588c77a0776873eb223f57db0bb1d5}{Colored\+Printf}} 
 This file used to init int or double values and to set user\textquotesingle{}s equation.
 
 There are depended scanning from stdin. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}\label{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}} 
+\index{io.h@{io.h}!color\_t@{color\_t}}
+\index{color\_t@{color\_t}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{color\_t}{color\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{io_8h_ab983350d6d1201c0ebd709320e7a0d50}{COLORS}} \mbox{\hyperlink{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}{color\+\_\+t}}}
+
+
 
 \doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{io_8h_ab983350d6d1201c0ebd709320e7a0d50}\label{io_8h_ab983350d6d1201c0ebd709320e7a0d50}} 
@@ -58,7 +66,7 @@ RED&Red color. \\
 \index{io.h@{io.h}!ColoredPrintf@{ColoredPrintf}}
 \index{ColoredPrintf@{ColoredPrintf}!io.h@{io.h}}
 \doxysubsubsection{\texorpdfstring{ColoredPrintf()}{ColoredPrintf()}}
-{\footnotesize\ttfamily int Colored\+Printf (\begin{DoxyParamCaption}\item[{color\+\_\+t}]{color,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Colored\+Printf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{io_8h_a0122f6c4d3f85ef1f2d0b8ca15f427cb}{color\+\_\+t}}}]{color,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 This function is similary to printf(), but this function can print colored text.
 

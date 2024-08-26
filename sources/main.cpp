@@ -27,7 +27,7 @@ static bool ProcessOption(option_t option);
  * options and instructions
  * for use.
  */
-void PrintHelp();
+static void PrintHelp();
 
 
 /**
@@ -35,7 +35,7 @@ void PrintHelp();
  * my program and I don't
  * know how to delete if.
  */
-void PrintDED();
+static void PrintDED();
 
 
 /**
@@ -109,7 +109,7 @@ static void RunSolving() {
 }
 
 
-void PrintHelp() {
+static void PrintHelp() {
     puts("Вас приветствует программа Square Solver!\n"
          "Для пользования программой введитe './squareSolver [ОПЦИЯ]'\n\n"
          "Доступные опции:\n"
@@ -119,7 +119,7 @@ void PrintHelp() {
 }
 
 
-void PrintDED() {
+static void PrintDED() {
     for (int i = 0; i < 32; i++)
         printf("бу");
     printf("\n");

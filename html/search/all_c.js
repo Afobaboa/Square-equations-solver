@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['test_35',['TEST',['../CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9cab2f0cd22b1963becef8b91d29d567fe8',1,'CmdLineArgsHandlers.h']]],
-  ['two_5froots_36',['TWO_ROOTS',['../squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05a876622d3c0b008da13a3685c64714e81',1,'squareEquation.h']]]
+  ['red_44',['RED',['../io_8h.html#ab983350d6d1201c0ebd709320e7a0d50af80f9a890089d211842d59625e561f88',1,'io.h']]],
+  ['root_5fcount_45',['ROOT_COUNT',['../squareEquation_8h.html#a54e76d3d5c72248f406cbb9dac41fc05',1,'squareEquation.h']]],
+  ['rootcount_46',['rootCount',['../structsquareEquationRoots.html#a3406c4d6d5133be1e5f97ae43c0e1931',1,'squareEquationRoots']]],
+  ['rootcount_5ft_47',['rootCount_t',['../squareEquation_8h.html#a200cd9e69dcb275a987ea7e79412ce71',1,'squareEquation.h']]],
+  ['run_48',['RUN',['../CmdLineArgsHandlers_8h.html#a4d39c1cfd27cf8736005f0eeec214c9ca439c688a4e9ed31638d5922a50680a8e',1,'CmdLineArgsHandlers.h']]],
+  ['runsolvertesting_49',['RunSolverTesting',['../solverTest_8h.html#a7a43d205b2e19589a185a5b04cd359ab',1,'RunSolverTesting():&#160;solverTest.cpp'],['../solverTest_8cpp.html#a7a43d205b2e19589a185a5b04cd359ab',1,'RunSolverTesting():&#160;solverTest.cpp']]],
+  ['runsolving_50',['RunSolving',['../main_8cpp.html#aeed5eea8bd597c574ebcabb986b2961e',1,'main.cpp']]]
 ];
