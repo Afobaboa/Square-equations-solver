@@ -1,4 +1,4 @@
-CC=g++
+CC=g++-11
 
 CPPFLAGS=-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall $\
 -Wextra -Weffc++ -Waggressive-loop-optimizations $\

@@ -4,6 +4,11 @@
 #include "solverTest.h"
 
 
+#define COLOR_RED   "\x1b[31m"
+#define COLOR_GREEN "\x1b[32m"
+#define COLOR_RESET "\x1b[0m"
+
+
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots);
 
 
@@ -39,7 +44,7 @@ void RunSolverTesting() {
     for (int i = 0; i < testCount; i++) {
         squareEquationRoots recievedRoots = SolveEquation(&solverTest[i].equation);
         if (AreRootsEqual(&recievedRoots, &solverTest[i].expectedRoots)) {
-            printf("Test %d completed.\n", i);
+            printf(COLOR_GREEN "Test %d completed.\n" COLOR_RESET, i);
         } else {
             PrintWrongTest(i, recievedRoots);
             break;
@@ -50,7 +55,7 @@ void RunSolverTesting() {
 
 
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots) {
-    printf("Test %d failed!!!\n"
+    printf(COLOR_RED "Test %d failed!!!\n" COLOR_RESET
            "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
            "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
            testNumber,
