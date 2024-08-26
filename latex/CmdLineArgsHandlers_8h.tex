@@ -1,0 +1,85 @@
+\hypertarget{CmdLineArgsHandlers_8h}{}\doxysection{headers/\+Cmd\+Line\+Args\+Handlers.h File Reference}
+\label{CmdLineArgsHandlers_8h}\index{headers/CmdLineArgsHandlers.h@{headers/CmdLineArgsHandlers.h}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}\label{CmdLineArgsHandlers_8h_a9c88bd4dd654dcfe1dc88d9e3d5e997d}} 
+typedef enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{OPTIONS}} {\bfseries option\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{OPTIONS}} \{ \newline
+\mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca9f5cb747b2e1f0ea781d2b1f2a5b4824}{HELP}}
+, \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca439c688a4e9ed31638d5922a50680a8e}{RUN}}
+, \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9cab2f0cd22b1963becef8b91d29d567fe8}{TEST}}
+, \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3}{DED}}
+, \newline
+\mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf}{WRONG\+\_\+\+OPTION}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{CmdLineArgsHandlers_8h_ac50e691af23568669d7862d675e94b0a}{Run\+Solving}} ()
+\item 
+void \mbox{\hyperlink{CmdLineArgsHandlers_8h_af71f252765d95151a3fbc15c6ada098a}{Print\+DED}} ()
+\item 
+void \mbox{\hyperlink{CmdLineArgsHandlers_8h_ae964ff8411b4fdcaf65cb5529aea4bef}{Print\+Help}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header used to process cmd line arguments of this program. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!OPTIONS@{OPTIONS}}
+\index{OPTIONS@{OPTIONS}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{OPTIONS}{OPTIONS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9c}{OPTIONS}}}
+
+This enum contain cmd line options. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HELP@{HELP}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!HELP@{HELP}}}\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca9f5cb747b2e1f0ea781d2b1f2a5b4824}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca9f5cb747b2e1f0ea781d2b1f2a5b4824}} 
+HELP&If user don\textquotesingle{}t know options. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RUN@{RUN}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!RUN@{RUN}}}\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca439c688a4e9ed31638d5922a50680a8e}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca439c688a4e9ed31638d5922a50680a8e}} 
+RUN&If user want to solve equations. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST@{TEST}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!TEST@{TEST}}}\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9cab2f0cd22b1963becef8b91d29d567fe8}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9cab2f0cd22b1963becef8b91d29d567fe8}} 
+TEST&If user want to test program. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DED@{DED}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!DED@{DED}}}\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9cabb23d73f3662941965181f9287a120f3}} 
+DED&WTF I don\textquotesingle{}t add this option. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRONG\_OPTION@{WRONG\_OPTION}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!WRONG\_OPTION@{WRONG\_OPTION}}}\mbox{\Hypertarget{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf}\label{CmdLineArgsHandlers_8h_a4d39c1cfd27cf8736005f0eeec214c9ca6d00cd28ef25955af28fa9c1e01881cf}} 
+WRONG\+\_\+\+OPTION&This option is for error handling. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CmdLineArgsHandlers_8h_af71f252765d95151a3fbc15c6ada098a}\label{CmdLineArgsHandlers_8h_af71f252765d95151a3fbc15c6ada098a}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!PrintDED@{PrintDED}}
+\index{PrintDED@{PrintDED}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{PrintDED()}{PrintDED()}}
+{\footnotesize\ttfamily void Print\+DED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This functions breaks my program and I don\textquotesingle{}t know how to delete if. \mbox{\Hypertarget{CmdLineArgsHandlers_8h_ae964ff8411b4fdcaf65cb5529aea4bef}\label{CmdLineArgsHandlers_8h_ae964ff8411b4fdcaf65cb5529aea4bef}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!PrintHelp@{PrintHelp}}
+\index{PrintHelp@{PrintHelp}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{PrintHelp()}{PrintHelp()}}
+{\footnotesize\ttfamily void Print\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print all available options and instructions for use. \mbox{\Hypertarget{CmdLineArgsHandlers_8h_ac50e691af23568669d7862d675e94b0a}\label{CmdLineArgsHandlers_8h_ac50e691af23568669d7862d675e94b0a}} 
+\index{CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}!RunSolving@{RunSolving}}
+\index{RunSolving@{RunSolving}!CmdLineArgsHandlers.h@{CmdLineArgsHandlers.h}}
+\doxysubsubsection{\texorpdfstring{RunSolving()}{RunSolving()}}
+{\footnotesize\ttfamily void Run\+Solving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Help user to solve his square equations. 
