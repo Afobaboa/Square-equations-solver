@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     int counter = 1;
-    while ((argc - counter) > 0  && argv[counter][0] == '-') {
+    while (argc > counter  && argv[counter][0] == '-') {
         option_t option = GetOption(argv[counter] + 1);
         if (!ProcessOption(option)) {
             PrintHelp();
