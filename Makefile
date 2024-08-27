@@ -24,14 +24,19 @@ integer-divide-by-zero,leak,nonnull-attribute,null,object-size,$\
 return,returns-nonnull-attribute,shift,signed-integer-overflow,$\
 undefined,unreachable,vla-bound,vptr
 
-SOURCES=$(wildcard sources/*.cpp)
-HEADERS=$(wildcard sources/*.h)
-OBJECTS=$(patsubst sources/%.cpp,objects/%.o,$(SOURCES))
+
+SOURCES_DIR=sources/
+HEADERS_DIR=headers/
+OBJECTS_DIR=objects/
+
+
+SOURCES=$(wildcard $(SOURCES_DIR)*.cpp)
+HEADERS=$(wildcard $(HEADERS_DIR)*.h)
+OBJECTS=$(patsubst $(SOURCES_DIR)%.cpp,$(OBJECTS_DIR)%.o,$(SOURCES))
 EXECUTABLE=squareSolver
 
 
 all: $(OBJECTS) $(EXECUTABLE)
-	doxygen
 
 
 test: $(EXECUTABLE)
@@ -46,9 +51,13 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CPPFLAGS) $(OBJECTS) -o $@
 
 
-$(OBJECTS): objects/%.o: sources/%.cpp $(HEADERS)
+$(OBJECTS): $(OBJECTS_DIR)%.o: $(SOURCES_DIR)%.cpp $(HEADERS) $(OBJECTS_DIR)
 	$(CC) -c $(CPPFLAGS) $< -o $@
 
 
+$(OBJECTS_DIR):
+	mkdir $(OBJECTS_DIR)
+
+
 clean: 
-	rm -rf $(OBJECTS) $(EXECUTABLE)
+	rm -rf $(OBJECTS_DIR) $(EXECUTABLE)
