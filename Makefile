@@ -25,39 +25,48 @@ return,returns-nonnull-attribute,shift,signed-integer-overflow,$\
 undefined,unreachable,vla-bound,vptr
 
 
+# needed directories
 SOURCES_DIR=sources/
 HEADERS_DIR=headers/
 OBJECTS_DIR=objects/
 
 
+# needed files
 SOURCES=$(wildcard $(SOURCES_DIR)*.cpp)
 HEADERS=$(wildcard $(HEADERS_DIR)*.h)
 OBJECTS=$(patsubst $(SOURCES_DIR)%.cpp,$(OBJECTS_DIR)%.o,$(SOURCES))
 EXECUTABLE=squareSolver
 
 
+# making project EXECUTABLE
 all: $(OBJECTS) $(EXECUTABLE)
 
 
+# start testing
 test: $(EXECUTABLE)
 	./$< -t
 
 
+# run EXECUTABLE
 run: $(EXECUTABLE)
 	./$< -r
 
 
+# compilation EXECUTABLE
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CPPFLAGS) $(OBJECTS) -o $@
 
 
+# compile object files
 $(OBJECTS): $(OBJECTS_DIR)%.o: $(SOURCES_DIR)%.cpp $(HEADERS) $(OBJECTS_DIR)
 	$(CC) -c $(CPPFLAGS) $< -o $@
 
 
+# make object directory
 $(OBJECTS_DIR):
 	mkdir $(OBJECTS_DIR)
 
 
+# clean object files and EXECUTABLE for recompilation
 clean: 
 	rm -rf $(OBJECTS_DIR) $(EXECUTABLE)
