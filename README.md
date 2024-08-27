@@ -8,8 +8,8 @@ You can use this like a calculator.
 # Downloading (Linux)
 
 
-You must have "git" on your computer
-for using this program.
+You don't need to have special programs
+on your computer for using this program.
 
 1. Clone repository
 ```git clone https://github.com/Afobaboa/Square-equations-solver```
