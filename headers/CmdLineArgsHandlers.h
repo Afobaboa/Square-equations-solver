@@ -15,10 +15,10 @@
  * cmd line options.
  */
 enum OPTIONS {
-    HELP,           /**< If user don't know options. */
-    RUN,            /**< If user want to solve equations. */
-    TEST,           /**< If user want to test program. */
-    DED,            /**< WTF I don't add this option. */
+    HELP,           /**< If user don't know options.        */
+    RUN,            /**< If user want to solve equations.   */
+    TEST,           /**< If user want to test program.      */
+    DED,            /**< WTF I don't add this option.       */
     WRONG_OPTION    /**< This option is for error handling. */
 };
 typedef enum OPTIONS option_t;

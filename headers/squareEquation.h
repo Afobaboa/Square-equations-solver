@@ -13,9 +13,9 @@
  * There are root count codes.
  */
 enum ROOT_COUNT {
-    NO_ROOTS = 0,               /**< Equation has't any roots. */
-    ONE_ROOT = 1,               /**< Equation has one root. */
-    TWO_ROOTS = 2,              /**< Equation has two roots. */
+    NO_ROOTS = 0,               /**< Equation has't any roots.       */
+    ONE_ROOT = 1,               /**< Equation has one root.          */
+    TWO_ROOTS = 2,              /**< Equation has two roots.         */
     INFINITE_ROOT_COUNT         /**< Equation has infinity of roots. */
 };
 

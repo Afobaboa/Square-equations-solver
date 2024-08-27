@@ -21,9 +21,9 @@
  */
 enum COLORS {
     GREEN,   /**< Green color. */
-    RED,     /**< Red color. */
+    RED,     /**< Red color.   */
     YELLOW,  /**< Yellow color */
-    WHITE    /**< White color */
+    WHITE    /**< White color  */
 };
 typedef enum COLORS color_t;
 
