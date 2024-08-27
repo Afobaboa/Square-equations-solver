@@ -1,3 +1,4 @@
-objects
-latex
-squareSolver
+/objects/
+/latex/
+/squareSolver
+/.gitignore
