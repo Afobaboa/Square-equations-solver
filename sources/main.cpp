@@ -83,7 +83,8 @@ static bool ProcessOption(option_t option) {
     case WRONG_OPTION:
         return false;
     default:    
-        fprintf(stderr, "ProcessOneOption(): ERROR, option doesn't exist.\n");
+        fprintf(stderr, "%s: %s(): ERROR at line %d, option doesn't exist.\n",
+                                              __FILE__, __FUNCTION__, __LINE__);
         return false;
     }
 }

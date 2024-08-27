@@ -68,11 +68,10 @@ void RunSolverTesting() {
 
 
 static void PrintWrongTest(int testNumber, squareEquationRoots recievedRoots) {
-    ColoredPrintf(RED, "Test %d failed!!!\n"
-              "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
-              "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
-              testNumber,
-              solverTest[testNumber].expectedRoots.x1, solverTest[testNumber].expectedRoots.x2, 
-                                                       solverTest[testNumber].expectedRoots.rootCount,
-              recievedRoots.x1, recievedRoots.x2, recievedRoots.rootCount);
+    ColoredPrintf(RED, "Test %d failed!!!\n", testNumber);
+    printf(      "Expected roots: x1 = %lg, x2 = %lg, count of roots = %d\n"
+                 "Resieved roots: x1 = %lg, x2 = %lg, count of roots = %d\n", 
+                 solverTest[testNumber].expectedRoots.x1, solverTest[testNumber].expectedRoots.x2, 
+                                                          solverTest[testNumber].expectedRoots.rootCount,
+                 recievedRoots.x1, recievedRoots.x2, recievedRoots.rootCount);
 }

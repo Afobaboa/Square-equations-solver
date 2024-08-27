@@ -142,7 +142,8 @@ void PrintRoots(squareEquationRoots* roots) {
         printf("# Корни данного уравнения x1 = %lg, x2 = %lg\n\n", roots->x1, roots->x2);
         break;
     default:
-        fprintf(stderr, "SS_io.cpp: printRoots(): ERROR, wrong rootCount type.\n");
+        fprintf(stderr, "%s: %s(): ERROR at line %d, wrong rootCount type.\n",
+                                              __FILE__, __FUNCTION__, __LINE__);
         break;
     }
 }
@@ -207,7 +208,8 @@ void PrintColor(color_t color) {
         printf(COLOR_WHITE);
         break;
     default: 
-        fprintf(stderr, "io.cpp: PrintColor(): ERROR, wrong color.");
+        fprintf(stderr, "%s: %s(): ERROR at line %d, wrong color.",
+                                 __FILE__, __FUNCTION__, __LINE__);
         break;
     }
 }
