@@ -39,7 +39,7 @@ EXECUTABLE=squareSolver
 
 
 # making project EXECUTABLE
-all: $(OBJECTS) $(EXECUTABLE)
+all: $(EXECUTABLE) $(OBJECTS_DIR)
 
 
 # start testing
@@ -58,7 +58,7 @@ $(EXECUTABLE): $(OBJECTS)
 
 
 # compile object files
-$(OBJECTS): $(OBJECTS_DIR)%.o: $(SOURCES_DIR)%.cpp $(HEADERS) $(OBJECTS_DIR)
+$(OBJECTS_DIR)%.o: $(SOURCES_DIR)%.cpp $(HEADERS)
 	$(CC) -c $(CPPFLAGS) $< -o $@
 
 
