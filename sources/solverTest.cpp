@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stddef.h>
 #include <stdio.h>
 #include "../headers/solver.h"
 #include "../headers/io.h"
@@ -53,7 +54,7 @@ const size_t testCount = sizeof(solverTest) / sizeof(SolverTest);
 
 void RunSolverTesting() {
     puts("Testing started.");
-    for (int i = 0; i < testCount; i++) {
+    for (size_t i = 0; i < testCount; i++) {
         squareEquationRoots recievedRoots = SolveEquation(&solverTest[i].equation);
         if (AreRootsEqual(&recievedRoots, &solverTest[i].expectedRoots)) {
             ColoredPrintf(GREEN, "Test %d completed.\n", i);
