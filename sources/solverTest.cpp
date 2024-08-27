@@ -48,7 +48,7 @@ static SolverTest solverTest[] = {
 };
 
 
-const int testCount = sizeof(solverTest) / sizeof(SolverTest);
+const size_t testCount = sizeof(solverTest) / sizeof(SolverTest);
     
 
 void RunSolverTesting() {
