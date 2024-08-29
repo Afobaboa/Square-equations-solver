@@ -33,7 +33,7 @@ static void PrintHelp();
 /**
  * This functions breaks
  * my program and I don't
- * know how to delete if.
+ * know how to delete it.
  */
 static void PrintDED();
 
