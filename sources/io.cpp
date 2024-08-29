@@ -104,10 +104,11 @@ bool SetEquation(squareEquation* equation) {
     puts("# Для решения уравнения ax^2 + bx + c = 0, введите a, b, c по порядку:");
 
     while (scanf("%lg %lg %lg", &equation->a, &equation->b, &equation->c) != 3 || 
-                                                !IsEquationFinite(equation) ||
-                                                            !IsInputClear()   ) {
+                                                   !IsEquationFinite(equation) ||
+                                                               !IsInputClear()   ) {
         if (IsEOF())
             return false;
+
         PrintWrongInputMessage();
         ClearInput();
     }
@@ -185,9 +186,11 @@ static bool IsEOF() {
 int ColoredPrintf(color_t color, const char* format, ...) {
     va_list args;
     va_start(args, format);
+
     PrintColor(color);
     int result = vprintf(format, args);
     printf(COLOR_RESET);
+    
     va_end(args);
     return result;
 }
